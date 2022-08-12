@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+$font: "Michroma", sans-serif;
+
+$black: #000;
+$white: #fff;
+
 * {
     margin: 0;
     padding: 0;
@@ -11,4 +18,62 @@
 html {
     font-size: 100%;
     -webkit-text-size-adjust: none;
+}
+
+body {
+    font-family: $font;
+}
+
+.hero {
+    width: 100%;
+    height: 30em;
+    position: relative;
+
+    .hero__img {
+        width: 100%;
+        height: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media only screen and (min-width: 36em) {
+            height: 40em;
+        }
+
+        img {
+            width: 100%;
+            height: 30em;
+            object-fit: cover;
+
+            @media only screen and (min-width: 36em) {
+                height: 40em;
+            }
+        }
+    }
+
+    .hero__overlay {
+        width: 100%;
+        height: 30em;
+        position: absolute;
+        background-color: #00000033;
+
+        @media only screen and (min-width: 36em) {
+            height: 40em;
+        }
+    }
+
+    .hero__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        h1 {
+            color: $white;
+        }
+    }
+
+    @media only screen and (min-width: 36em) {
+        height: 40em;
+    }
 }
