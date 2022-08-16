@@ -100,14 +100,75 @@ main {
   margin: 2em 1em;
 }
 
+main section {
+  margin: 2em 0;
+}
+
 main section h2 {
   color: #543ffc;
   text-align: center;
+  margin-bottom: 1em;
 }
 
 main section p {
   font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 36em) {
+  main section {
+    margin: 3em 0;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  main section {
+    margin: 4em 0;
+  }
+}
+
+main section.section-1 .section-1__grid {
+  display: grid;
+  margin-top: 2em;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+main section.section-1 .section-1__grid i {
+  display: block;
+  margin-bottom: 1em;
+}
+
+main section.section-1 .section-1__grid i::before {
+  display: block;
+  color: #543ffc;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+main section.section-1 .section-1__grid p {
+  color: #543ffc;
+  font-family: "Michroma", sans-serif;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 36em) {
+  main section.section-1 .section-1__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  main section.section-1 .section-1__grid {
+    width: 90%;
+    margin: 2em auto 0 auto;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  main section.section-1 .section-1__grid {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 36em) {

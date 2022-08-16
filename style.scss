@@ -1,3 +1,5 @@
+@charset "UFT-8";
+
 // Fonts
 @font-face {
     font-family: "Michroma";
@@ -107,14 +109,66 @@ main {
 
     // Sections
     section {
+        margin: 2em 0;
+
         h2 {
             color: $accent;
             text-align: center;
+            margin-bottom: 1em;
         }
 
         p {
             font-family: $secondary-font;
+            font-size: 1.2rem;
             text-align: center;
+        }
+
+        @media only screen and (min-width: 36em) {
+            margin: 3em 0;
+        }
+
+        @media only screen and (min-width: 62em) {
+            margin: 4em 0;
+        }
+    }
+
+    // Section 1
+    section.section-1 {
+        .section-1__grid {
+            display: grid;
+            margin-top: 2em;
+            grid-template-columns: repeat(1, 1fr);
+
+            i {
+                display: block;
+                margin-bottom: 1em;
+
+                &::before {
+                    display: block;
+                    color: $accent;
+                    font-size: 3.5rem;
+                    text-align: center;
+                }
+            }
+
+            p {
+                color: $accent;
+                font-family: $primary-font;
+                font-size: 1.2rem;
+            }
+
+            @media only screen and (min-width: 36em) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media only screen and (min-width: 62em) {
+                width: 90%;
+                margin: 2em auto 0 auto;
+            }
+    
+            @media only screen and (min-width: 75em) {
+                width: 80%;
+            }
         }
     }
 
