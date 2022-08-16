@@ -38,7 +38,7 @@ a {
 }
 
 .on-page-load {
-  transition: none;
+  transition: none !important;
 }
 
 nav#menu {
