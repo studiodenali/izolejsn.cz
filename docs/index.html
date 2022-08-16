@@ -16,6 +16,7 @@
         <a href="#">O nás</a>
         <a href="#">Kontakt</a>
     </nav>
+
     <header>
         <div id="logo">
             <img src="./images/logo.svg">
@@ -32,41 +33,44 @@
             <h1>máte vysoké účty za vytápění?</h1>
         </div>
     </div>-->
-    <section class="section-1">
-        <h1>máte vysoké účty<br>za vytápění?</h1>
-        <img src="./images/hero.jpg">
-    </section>
-    <main>
-        <section class="section-2">
-            <h2>děláme <span class="underline">stříkanou</span> izolaci</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis blanditiis consequatur fugiat aperiam id
-                earum
-                quam esse, odio sed molestiae.</p>
-            <div class="section-2__grid">
-                <div class="item">
-                    <i class="fa-solid fa-piggy-bank"></i>
-                    <p>uštřete peníze za vytápění</p>
+    <div class="container">
+        <h1 class="heading">máte vysoké účty<br>za vytápění?</h1>
+    </div>
+    <div class="hero"></div>
+    <div class="container">
+        <main>
+            <section class="section-1">
+                <h2>děláme <span class="underline">stříkanou</span> izolaci</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis blanditiis consequatur fugiat aperiam
+                    id
+                    earum
+                    quam esse, odio sed molestiae.</p>
+                <div class="section-1__grid">
+                    <div class="item">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                        <p>uštřete peníze za vytápění</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-temperature-low"></i>
+                        <p>žádné tepelné mosty</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-people-group"></i>
+                        <p>zajišťují zkušení řemeslníci</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <i class="fa-solid fa-temperature-low"></i>
-                    <p>žádné tepelné mosty</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-people-group"></i>
-                    <p>zajišťují zkušení řemeslníci</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>hodí se na <span class="underline">tyto</span> místa</h2>
-        </section>
-        <section>
-            <h2>spočítejte si za <span class="underline">kolik</span> to bude</h2>
-        </section>
-        <section>
-            <h2>náš <span class="underline">tým</span></h2>
-        </section>
-    </main>
+            </section>
+            <section>
+                <h2>hodí se na <span class="underline">tyto</span> místa</h2>
+            </section>
+            <section>
+                <h2>spočítejte si za <span class="underline">kolik</span> to bude</h2>
+            </section>
+            <section>
+                <h2>náš <span class="underline">tým</span></h2>
+            </section>
+        </main>
+    </div>
     <footer>
         <div id="signature">
             <p>
@@ -85,7 +89,9 @@
         </p>
     </footer>
     <script>
-        document.querySelector(".on-page-load").classList.remove("on-page-load");
+        document.querySelectorAll(".on-page-load").forEach((element) => {
+            element.classList.remove("on-page-load");
+        })
 
         let menuOpen = false;
         const btn = document.getElementById("menu-toggle");
