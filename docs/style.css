@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 @font-face {
   font-family: "Michroma";
   font-style: normal;
@@ -22,6 +23,15 @@ html {
 
 body {
   font-family: "Michroma", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
 }
 
 .hero {
@@ -84,4 +94,114 @@ body {
   .hero {
     height: 40em;
   }
+}
+
+main {
+  margin: 2em 1em;
+}
+
+main section h2 {
+  color: #543ffc;
+  text-align: center;
+}
+
+main section p {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+
+@media only screen and (min-width: 36em) {
+  main {
+    width: 90%;
+    margin: 2em auto;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  main {
+    width: 75%;
+    margin: 3em auto;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  main {
+    width: 65%;
+    margin: 4em auto;
+  }
+}
+
+footer {
+  margin: 2em 1em;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer p a {
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+}
+
+footer p a:hover {
+  color: #543ffc;
+}
+
+footer #signature a {
+  color: inherit;
+  text-align: center;
+}
+
+footer #signature p:hover {
+  color: #1bb4b9;
+}
+
+footer #signature svg {
+  height: 12px;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+}
+
+footer #signature svg path {
+  fill: #1bb4b9;
+}
+
+footer .copyright {
+  color: #000;
+}
+
+footer .copyright:hover {
+  color: #1bb4b9;
+}
+
+footer #signature a {
+  color: inherit;
+  text-align: center;
+}
+
+footer #signature p:hover {
+  color: #1bb4b9;
+}
+
+footer #signature svg {
+  height: 12px;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+}
+
+footer #signature svg path {
+  fill: #1bb4b9;
+}
+
+footer .copyright {
+  color: #000;
+}
+
+footer .copyright:hover {
+  color: #1bb4b9;
 }

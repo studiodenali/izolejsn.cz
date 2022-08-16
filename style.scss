@@ -1,4 +1,4 @@
-// Font
+// Fonts
 @font-face {
     font-family: "Michroma";
     font-style: normal;
@@ -6,10 +6,15 @@
     src: url("Michroma-Regular.ttf") format("truetype");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 // Variables
-$font: "Michroma", sans-serif;
+$primary-font: "Michroma", sans-serif;
+$secondary-font: "Quicksand", sans-serif;
+
 $black: #000;
 $white: #fff;
+$accent: #543ffc;
 
 // Basics
 * {
@@ -17,7 +22,8 @@ $white: #fff;
     padding: 0;
     box-sizing: border-box;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         box-sizing: border-box;
     }
 }
@@ -28,7 +34,16 @@ html {
 }
 
 body {
-    font-family: $font;
+    font-family: $primary-font;
+}
+
+a {
+    color: inherit;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
 }
 
 // Hero
@@ -83,5 +98,113 @@ body {
 
     @media only screen and (min-width: 36em) {
         height: 40em;
+    }
+}
+
+// Main
+main {
+    margin: 2em 1em;
+
+    // Sections
+    section {
+        h2 {
+            color: $accent;
+            text-align: center;
+        }
+
+        p {
+            font-family: $secondary-font;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 36em) {
+        width: 90%;
+        margin: 2em auto;
+    }
+
+    @media only screen and (min-width: 62em) {
+        width: 75%;
+        margin: 3em auto;
+    }
+
+    @media only screen and (min-width: 75em) {
+        width: 65%;
+        margin: 4em auto;
+    }
+}
+
+footer {
+    margin: 2em 1em;
+
+    p {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            transition: color 200ms ease-in-out;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    #signature a {
+        color: inherit;
+        text-align: center;
+    }
+
+    #signature p:hover {
+        color: #1bb4b9;
+    }
+
+    #signature svg {
+        height: 12px;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linejoin: round;
+        stroke-miterlimit: 2;
+    }
+
+    #signature svg path {
+        fill: #1bb4b9;
+    }
+
+    .copyright {
+        color: #000;
+    }
+
+    .copyright:hover {
+        color: #1bb4b9;
+    }
+
+    #signature a {
+        color: inherit;
+        text-align: center;
+    }
+
+    #signature p:hover {
+        color: #1bb4b9;
+    }
+
+    #signature svg {
+        height: 12px;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linejoin: round;
+        stroke-miterlimit: 2;
+    }
+
+    #signature svg path {
+        fill: #1bb4b9;
+    }
+
+    .copyright {
+        color: #000;
+    }
+
+    .copyright:hover {
+        color: #1bb4b9;
     }
 }
