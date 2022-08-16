@@ -33,6 +33,7 @@ $accent: #543ffc;
 html {
     font-size: 100%;
     -webkit-text-size-adjust: none;
+    overflow-x: hidden;
 }
 
 body {
@@ -48,58 +49,262 @@ a {
     text-underline-offset: 0.1em;
 }
 
-// Hero
-.hero {
+// Menu
+nav#menu {
     width: 100%;
-    height: 30em;
-    position: relative;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $white;
+    transform: translateX(100%);
+    transition: transform 500ms;
 
-    .hero__img {
-        width: 100%;
-        height: 30em;
-        position: absolute;
-        top: 0;
-        left: 0;
+    &.open {
+        transform: translateX(0)
+    }
 
-        @media only screen and (min-width: 36em) {
-            height: 40em;
-        }
+    @media only screen and (min-width: 36em) {
+        width: 40%;
+    }
+}
+
+// Header
+header {
+    width: 100%;
+    padding: 4em;
+
+    #logo {
+        width: 14em;
+        padding: 0.7em 1em;
+        border-radius: 1em;
+        background-color: $accent;
 
         img {
-            width: 100%;
-            height: 30em;
-            object-fit: cover;
+            width: 12em;
+            display: block;
+        }
+    }
 
-            @media only screen and (min-width: 36em) {
-                height: 40em;
+    // Menu
+    #menu-toggle {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 4em;
+        right: 4em;
+        z-index: 2;
+        padding: 1em;
+        border-radius: 10em;
+        box-sizing: content-box;
+        background-color: $white;
+        cursor: pointer;
+
+        .line {
+            display: block;
+            width: 50px;
+            height: 1px;
+            position: relative;
+            margin: auto;
+            border: none;
+            background-color: $black;
+            color: inherit;
+            font-size: 0;
+            transition: background-color 350ms;
+
+            &.on-page-load {
+                transition: none;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                background-color: $black;
+                transform-origin: 50% 0%;
+            }
+
+            &::before {
+                transform: translate(-50%, -14px);
+            }
+
+            &::after {
+                transform: translate(-50%, 14px);
+            }
+
+            @keyframes menuBeforeOpen {
+                0% {
+                    transform: translate(-50%, -14px);
+                }
+
+                40% {
+                    transform: translate(-50%, 0);
+                }
+
+                60% {
+                    transform: translate(-50%, 0);
+                }
+
+                100% {
+                    transform: translate(-50%, 0) rotate(45deg);
+                }
+            }
+
+            @keyframes menuAfterOpen {
+                0% {
+                    transform: translate(-50%, 14px);
+                }
+
+                40% {
+                    transform: translate(-50%, 0);
+                }
+
+                60% {
+                    transform: translate(-50%, 0);
+                }
+
+                100% {
+                    transform: translate(-50%, 0) rotate(-45deg);
+                }
+            }
+
+            @keyframes menuBeforeClose {
+                0% {
+                    transform: translate(-50%, 0) rotate(45deg);
+                }
+
+                40% {
+                    transform: translate(-50%, 0);
+                }
+
+                60% {
+                    transform: translate(-50%, 0);
+                }
+
+                100% {
+                    transform: translate(-50%, -14px);
+                }
+            }
+
+            @keyframes menuAfterClose {
+                0% {
+                    transform: translate(-50%, 0) rotate(-45deg);
+                }
+
+                40% {
+                    transform: translate(-50%, 0);
+
+                }
+
+                60% {
+                    transform: translate(-50%, 0);
+                }
+
+                100% {
+                    transform: translate(-50%, 14px);
+                }
+            }
+        }
+
+        &.open .line {
+            background-color: transparent;
+
+            &::before {
+                animation: menuBeforeOpen 0.5s forwards normal;
+            }
+
+            &::after {
+                animation: menuAfterOpen 0.5s forwards normal;
+            }
+        }
+
+        &.close .line {
+            background-color: $black;
+
+            &::before {
+                animation: menuBeforeClose 0.5s forwards;
+            }
+
+            &::after {
+                animation: menuAfterClose 0.5s forwards;
             }
         }
     }
 
-    .hero__overlay {
-        width: 100%;
-        height: 30em;
-        position: absolute;
-        background-color: #00000033;
+    @media only screen and (min-width: 36em) {
+        padding: 4em 5%;
+    }
+}
 
-        @media only screen and (min-width: 36em) {
-            height: 40em;
+// Hero
+.hero {
+    width: 100%;
+    height: 25em;
+    position: relative;
+
+    .hero__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
     .hero__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        top: 0;
+        left: 0;
+        padding: 1em;
+        background-color: #00000033;
 
         h1 {
             color: $white;
+            text-align: center;
         }
     }
 
     @media only screen and (min-width: 36em) {
-        height: 40em;
+        height: 30em;
+    }
+}
+
+// Section 1
+section.section-1 {
+    margin: 2em 1em;
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 36em) {
+        width: 90%;
+        margin: 2em auto;
     }
 }
 
@@ -132,9 +337,10 @@ main {
         }
     }
 
-    // Section 1
-    section.section-1 {
-        .section-1__grid {
+    // Section 2
+    section.section-2 {
+        .section-2__grid {
+            gap: 2em;
             display: grid;
             margin-top: 2em;
             grid-template-columns: repeat(1, 1fr);
@@ -165,7 +371,7 @@ main {
                 width: 90%;
                 margin: 2em auto 0 auto;
             }
-    
+
             @media only screen and (min-width: 75em) {
                 width: 80%;
             }
@@ -204,61 +410,34 @@ footer {
         }
     }
 
-    #signature a {
-        color: inherit;
-        text-align: center;
-    }
+    #signature {
+        a {
+            color: inherit;
+            text-align: center;
 
-    #signature p:hover {
-        color: #1bb4b9;
-    }
+            &:hover {
+                color: $accent;
+            }
+        }
 
-    #signature svg {
-        height: 12px;
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        stroke-linejoin: round;
-        stroke-miterlimit: 2;
-    }
+        svg {
+            height: 12px;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            stroke-linejoin: round;
+            stroke-miterlimit: 2;
 
-    #signature svg path {
-        fill: #1bb4b9;
-    }
-
-    .copyright {
-        color: #000;
-    }
-
-    .copyright:hover {
-        color: #1bb4b9;
-    }
-
-    #signature a {
-        color: inherit;
-        text-align: center;
-    }
-
-    #signature p:hover {
-        color: #1bb4b9;
-    }
-
-    #signature svg {
-        height: 12px;
-        fill-rule: evenodd;
-        clip-rule: evenodd;
-        stroke-linejoin: round;
-        stroke-miterlimit: 2;
-    }
-
-    #signature svg path {
-        fill: #1bb4b9;
+            path {
+                fill: $accent;
+            }
+        }
     }
 
     .copyright {
-        color: #000;
+        color: $black;
     }
 
     .copyright:hover {
-        color: #1bb4b9;
+        color: $accent;
     }
 }
