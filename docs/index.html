@@ -93,6 +93,12 @@
             element.classList.remove("on-page-load");
         })
 
+        let width = window.innerWidth - document.documentElement.clientWidth;
+
+        window.onresize = function () {
+            width = window.innerWidth - document.documentElement.clientWidth;
+        };
+
         let menuOpen = false;
         const btn = document.getElementById("menu-toggle");
         const menu = document.getElementById("menu");
@@ -101,19 +107,29 @@
             if (!menuOpen) {
                 btn.classList.add("open");
                 menu.classList.add("open");
+
                 document.documentElement.style.overflowY = "hidden";
+                document.querySelectorAll(".container").forEach(container => {
+                    container.style.paddingRight = width + "px";
+                });
+
                 menuOpen = true;
             } else if (menuOpen) {
                 menu.classList.remove("open");
                 btn.classList.add("close");
                 btn.classList.remove("open");
+
                 document.documentElement.style.overflowY = "auto";
+                document.querySelectorAll(".container").forEach(container => {
+                    container.style.paddingRight = "0";
+                });
+                
                 setTimeout(() => {
                     btn.classList.remove("close");
                 }, "500");
                 menuOpen = false;
-            }
-        }
+            };
+        };
     </script>
 </body>
 
