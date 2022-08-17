@@ -16,7 +16,9 @@
         <a href="#">O nás</a>
         <a href="#">Kontakt</a>
     </nav>
-
+    <div class="overlay">
+        <div class="overlay__white"></div>
+    </div>
     <header>
         <div id="logo">
             <img src="./images/logo.svg">
@@ -107,6 +109,7 @@
             if (!menuOpen) {
                 btn.classList.add("open");
                 menu.classList.add("open");
+                document.querySelector(".overlay").classList.add("open");
 
                 document.documentElement.style.overflowY = "hidden";
                 document.querySelectorAll(".container").forEach(container => {
@@ -118,12 +121,13 @@
                 menu.classList.remove("open");
                 btn.classList.add("close");
                 btn.classList.remove("open");
+                document.querySelector(".overlay").classList.remove("open");
 
                 document.documentElement.style.overflowY = "auto";
                 document.querySelectorAll(".container").forEach(container => {
                     container.style.paddingRight = "0";
                 });
-                
+
                 setTimeout(() => {
                     btn.classList.remove("close");
                 }, "500");

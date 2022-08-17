@@ -47,7 +47,7 @@ nav#menu {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #fff;
   transform: translateX(100%);
   transition: transform 500ms;
@@ -60,6 +60,41 @@ nav#menu.open {
 @media only screen and (min-width: 36em) {
   nav#menu {
     width: 40%;
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  background-color: #543ffc1a;
+  backdrop-filter: blur(5px);
+  transition: opacity 500ms ease-in-out;
+}
+
+.overlay .overlay__white {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: inherit;
+  background-color: #ffffff80;
+  backdrop-filter: blur(5px);
+}
+
+.overlay.open {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 36em) {
+  .overlay {
+    display: block;
   }
 }
 
