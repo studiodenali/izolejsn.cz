@@ -53,6 +53,12 @@ a {
     text-underline-offset: 0.1em;
 }
 
+.selection::selection,
+.selection br::selection {
+    color: $turquoise;
+    background-color: $purple;
+}
+
 .on-page-load {
     transition: none !important;
 }
@@ -86,6 +92,11 @@ nav#menu {
             &:hover {
                 text-decoration: underline;
             }
+
+            &::selection {
+                color: $purple;
+                background-color: $turquoise;
+            }
         }
     }
 
@@ -104,6 +115,11 @@ nav#menu {
     
                 &:hover {
                     text-decoration: underline;
+                }
+
+                &::selection {
+                    color: $turquoise;
+                    background-color: $purple;
                 }
             }
         }

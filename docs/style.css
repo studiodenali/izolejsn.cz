@@ -38,6 +38,12 @@ a {
   text-underline-offset: 0.1em;
 }
 
+.selection::selection,
+.selection br::selection {
+  color: #98f9ff;
+  background-color: #533ffc;
+}
+
 .on-page-load {
   transition: none !important;
 }
@@ -74,6 +80,11 @@ nav#menu nav.menu__links p a:hover {
   text-decoration: underline;
 }
 
+nav#menu nav.menu__links p a::selection {
+  color: #533ffc;
+  background-color: #98f9ff;
+}
+
 nav#menu div.menu__contact {
   margin: 4em 0 2em 0;
 }
@@ -92,6 +103,11 @@ nav#menu div.menu__contact p a {
 
 nav#menu div.menu__contact p a:hover {
   text-decoration: underline;
+}
+
+nav#menu div.menu__contact p a::selection {
+  color: #98f9ff;
+  background-color: #533ffc;
 }
 
 @media only screen and (min-width: 36em) {
