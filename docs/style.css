@@ -471,6 +471,22 @@ main section.section-1 .section-1__grid p {
   }
 }
 
+main.material h3 {
+  margin-top: 2em;
+}
+
+main.material p {
+  margin: 1em 0;
+}
+
+main.material ul {
+  padding-left: 2.5em;
+}
+
+main.material ul li {
+  margin: 1em 0;
+}
+
 footer {
   margin: 2em 1em;
 }
