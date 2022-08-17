@@ -53,7 +53,7 @@ nav#menu {
   padding: 4em 8em 4em 4em;
   background-color: #533ffc;
   transform: translateX(100%);
-  transition: transform 500ms;
+  transition: transform 500ms ease-in-out;
 }
 
 nav#menu.open {
@@ -222,16 +222,16 @@ header #menu-toggle .line::before, header #menu-toggle .line::after {
 }
 
 header #menu-toggle .line::before {
-  transform: translate(-50%, -14px);
+  transform: translate(-50%, -0.875em);
 }
 
 header #menu-toggle .line::after {
-  transform: translate(-50%, 14px);
+  transform: translate(-50%, 0.875em);
 }
 
 @keyframes menuBeforeOpen {
   0% {
-    transform: translate(-50%, -14px);
+    transform: translate(-50%, -0.875em);
   }
   40% {
     transform: translate(-50%, 0);
@@ -246,7 +246,7 @@ header #menu-toggle .line::after {
 
 @keyframes menuAfterOpen {
   0% {
-    transform: translate(-50%, 14px);
+    transform: translate(-50%, 0.875em);
   }
   40% {
     transform: translate(-50%, 0);
@@ -270,7 +270,7 @@ header #menu-toggle .line::after {
     transform: translate(-50%, 0);
   }
   100% {
-    transform: translate(-50%, -14px);
+    transform: translate(-50%, -0.875em);
   }
 }
 
@@ -285,7 +285,7 @@ header #menu-toggle .line::after {
     transform: translate(-50%, 0);
   }
   100% {
-    transform: translate(-50%, 14px);
+    transform: translate(-50%, 0.875em);
   }
 }
 
@@ -434,6 +434,40 @@ main section.section-1 .section-1__grid p {
 @media only screen and (min-width: 75em) {
   main {
     margin: 4em 0;
+  }
+}
+
+.materialy {
+  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.materialy .material {
+  gap: 1em;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+}
+
+.materialy .material a {
+  text-decoration: none;
+}
+
+.materialy .material a h2 mark {
+  color: #533ffc;
+  background-color: #98f9ff;
+}
+
+.materialy .material a:hover h2 mark, .materialy .material a:focus h2 mark {
+  color: #98f9ff;
+  background-color: #533ffc;
+}
+
+@media only screen and (min-width: 62em) {
+  .materialy .material {
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 7fr;
   }
 }
 

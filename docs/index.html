@@ -13,7 +13,7 @@
 <body>
     <nav id="menu">
         <nav class="menu__links">
-            <p><a href="#">Domů</a></p>
+            <p><a href="./index.html">Domů</a></p>
             <p><a href="./materialy.html">Materiály</a></p>
             <p><a href="./cenik.html">Ceník</a></p>
             <p><a href="./o-nas.html">O nás</a></p>
@@ -28,7 +28,9 @@
     </div>
     <header>
         <div id="logo">
-            <img src="./images/logo.svg">
+            <a href="./index.html">
+                <img src="./images/logo.svg">
+            </a>
         </div>
         <div id="menu-toggle">
             <div class="line on-page-load"></div>
@@ -65,10 +67,10 @@
                 <h2>hodí se na <span class="underline">tyto</span> místa</h2>
             </section>
             <section>
-                <h2>spočítejte si za <span class="underline">kolik</span> to bude</h2>
+                <h2>spočítejte si <span class="underline">kolik</span> ušetříte</h2>
             </section>
             <section>
-                <h2>náš <span class="underline">tým</span></h2>
+                <h2>výhody izolace</h2>
             </section>
         </main>
     </div>
@@ -89,41 +91,7 @@
             <script>document.write(new Date().getFullYear())</script> izolejsn.cz
         </p>
     </footer>
-    <script>
-        document.querySelectorAll(".on-page-load").forEach((element) => {
-            element.classList.remove("on-page-load");
-        })
-
-        let width = window.innerWidth - document.documentElement.clientWidth;
-
-        let menuOpen = false;
-        const btn = document.getElementById("menu-toggle");
-        const menu = document.getElementById("menu");
-
-        btn.onclick = function () {
-            if (!menuOpen) {
-                btn.classList.add("open");
-                menu.classList.add("open");
-                document.querySelector(".overlay").classList.add("open");
-
-                document.documentElement.style.overflowY = "hidden";
-
-                menuOpen = true;
-            } else if (menuOpen) {
-                menu.classList.remove("open");
-                btn.classList.add("close");
-                btn.classList.remove("open");
-                document.querySelector(".overlay").classList.remove("open");
-
-                document.documentElement.style.overflowY = "auto";
-
-                setTimeout(() => {
-                    btn.classList.remove("close");
-                }, "500");
-                menuOpen = false;
-            };
-        };
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
