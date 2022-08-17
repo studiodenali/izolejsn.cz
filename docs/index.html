@@ -12,9 +12,16 @@
 
 <body>
     <nav id="menu">
-        <a href="#">Domů</a>
-        <a href="#">O nás</a>
-        <a href="#">Kontakt</a>
+        <nav class="menu__links">
+            <p><a href="#">Domů</a></p>
+            <p><a href="./materialy.html">Materiály</a></p>
+            <p><a href="./cenik.html">Ceník</a></p>
+            <p><a href="./o-nas.html">O nás</a></p>
+            <p><a href="./kontakt.html">Kontakt</a></p>
+        </nav>
+        <div class="menu__contact">
+            <p><a href="tel:+420773744401">+420 773 744 401</a></p>
+        </div>
     </nav>
     <div class="overlay">
         <div class="overlay__white"></div>
@@ -27,14 +34,6 @@
             <div class="line on-page-load"></div>
         </div>
     </header>
-    <!--<div class="hero">
-        <div class="hero__img">
-            <img src="./images/hero.jpg">
-        </div>
-        <div class="hero__content">
-            <h1>máte vysoké účty za vytápění?</h1>
-        </div>
-    </div>-->
     <div class="container">
         <h1 class="heading">máte vysoké účty<br>za vytápění?</h1>
     </div>
@@ -97,10 +96,6 @@
 
         let width = window.innerWidth - document.documentElement.clientWidth;
 
-        window.onresize = function () {
-            width = window.innerWidth - document.documentElement.clientWidth;
-        };
-
         let menuOpen = false;
         const btn = document.getElementById("menu-toggle");
         const menu = document.getElementById("menu");
@@ -112,9 +107,6 @@
                 document.querySelector(".overlay").classList.add("open");
 
                 document.documentElement.style.overflowY = "hidden";
-                document.querySelectorAll(".container").forEach(container => {
-                    container.style.paddingRight = width + "px";
-                });
 
                 menuOpen = true;
             } else if (menuOpen) {
@@ -124,9 +116,6 @@
                 document.querySelector(".overlay").classList.remove("open");
 
                 document.documentElement.style.overflowY = "auto";
-                document.querySelectorAll(".container").forEach(container => {
-                    container.style.paddingRight = "0";
-                });
 
                 setTimeout(() => {
                     btn.classList.remove("close");
