@@ -79,7 +79,7 @@ nav#menu {
     z-index: 2;
     overflow-y: auto;
     padding: 4em 8em 4em 4em;
-    background-color: $purple;
+    background-color: $turquoise;
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
 
@@ -91,17 +91,12 @@ nav#menu {
         margin: 1em 0;
 
         a {
-            color: $turquoise;
+            color: $purple;
             font-size: 2rem;
             text-decoration: none;
 
             &:hover {
                 text-decoration: underline;
-            }
-
-            &::selection {
-                color: $purple;
-                background-color: $turquoise;
             }
         }
     }
@@ -114,18 +109,13 @@ nav#menu {
 
             a {
                 padding: 0.5em 1em;
-                background-color: $turquoise;
-                color: $purple;
+                background-color: $purple;
+                color: $turquoise;
                 font-size: 1.5rem;
                 text-decoration: none;
 
                 &:hover {
                     text-decoration: underline;
-                }
-
-                &::selection {
-                    color: $turquoise;
-                    background-color: $purple;
                 }
             }
         }

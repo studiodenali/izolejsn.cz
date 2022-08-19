@@ -63,7 +63,7 @@ nav#menu {
   z-index: 2;
   overflow-y: auto;
   padding: 4em 8em 4em 4em;
-  background-color: #533ffc;
+  background-color: #98f9ff;
   transform: translateX(100%);
   transition: transform 500ms ease-in-out;
 }
@@ -77,18 +77,13 @@ nav#menu nav.menu__links p {
 }
 
 nav#menu nav.menu__links p a {
-  color: #98f9ff;
+  color: #533ffc;
   font-size: 2rem;
   text-decoration: none;
 }
 
 nav#menu nav.menu__links p a:hover {
   text-decoration: underline;
-}
-
-nav#menu nav.menu__links p a::selection {
-  color: #533ffc;
-  background-color: #98f9ff;
 }
 
 nav#menu div.menu__contact {
@@ -101,19 +96,14 @@ nav#menu div.menu__contact p {
 
 nav#menu div.menu__contact p a {
   padding: 0.5em 1em;
-  background-color: #98f9ff;
-  color: #533ffc;
+  background-color: #533ffc;
+  color: #98f9ff;
   font-size: 1.5rem;
   text-decoration: none;
 }
 
 nav#menu div.menu__contact p a:hover {
   text-decoration: underline;
-}
-
-nav#menu div.menu__contact p a::selection {
-  color: #98f9ff;
-  background-color: #533ffc;
 }
 
 @media only screen and (min-width: 36em) {
