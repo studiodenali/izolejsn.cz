@@ -374,6 +374,7 @@ header.header-index .header__heading h1 {
   transform: translate(-50%, -25%);
   color: #98f9ff;
   font-size: 3.5rem;
+  text-align: center;
 }
 
 header.header-page {
