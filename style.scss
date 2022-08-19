@@ -59,6 +59,12 @@ a {
     background-color: $purple;
 }
 
+.selection-turquoise::selection,
+.selection-turquoise br::selection {
+    color: $purple;
+    background-color: $turquoise;
+}
+
 .on-page-load {
     transition: none !important;
 }
@@ -185,10 +191,9 @@ nav#menu {
 }
 
 // Header
-header {
+header.header-index,
+header.header-page {
     width: 100%;
-    height: 9.75em;
-    padding: 0 1em;
     background-color: $purple;
 
     #logo {
@@ -353,6 +358,38 @@ header {
             right: 5%;
         }
     }
+}
+
+header.header-index {
+
+    .header__navbar {
+        height: 9.75em;
+        padding: 0 1em;
+
+        @media only screen and (min-width: 36em) {
+            padding: 2em 5%;
+        }
+    }
+
+    .header__heading {
+        width: 100%;
+        height: 25em;
+        position: relative;
+
+        h1 {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+            color: $turquoise;
+            font-size: 3.5rem;
+        }
+    }
+}
+
+header.header-page {
+    height: 9.75em;
+    padding: 0 1em;
 
     @media only screen and (min-width: 36em) {
         padding: 2em 5%;
@@ -360,7 +397,7 @@ header {
 }
 
 // Heading
-h1.heading.index {
+h1.heading-index {
     font-size: 3rem;
     text-align: center;
     margin: 2em 0;
