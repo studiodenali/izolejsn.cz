@@ -112,7 +112,7 @@ nav#menu {
                 color: $purple;
                 font-size: 1.5rem;
                 text-decoration: none;
-    
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -360,7 +360,7 @@ header {
 }
 
 // Heading
-h1.heading {
+h1.heading.index {
     font-size: 3rem;
     text-align: center;
     margin: 2em 0;
@@ -382,7 +382,7 @@ h1.heading {
 }
 
 // Main
-main {
+main.main-index {
     margin: 2em 0;
 
     // Sections
@@ -465,57 +465,66 @@ main {
 }
 
 // Materiály
-.materialy {
-    gap: 2em;
+main.main-materialy {
+    gap: 4em;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
 
-    .material {
-        gap: 1em;
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
+    .heading-page {
+        padding: 3em 0;
+        background-color: $turquoise;
 
-        a {
-            text-decoration: none;
-
-            h2 {
-                mark {
-                    color: $purple;
-                    background-color: $turquoise;
-                }
-            }
-
-            &:hover, &:focus {
-                h2 mark {
-                    color: $turquoise;
-                    background-color: $purple;
-                }
-            }
+        h1 {
+            color: $purple;
+            font-size: 3rem;
+            text-align: center;
         }
-       
+
         @media only screen and (min-width: 62em) {
-            grid-template-rows: auto;
-            grid-template-columns: 3fr 7fr;
+            height: calc(100vh - 9.75em);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
-}
 
-main.material {
-    h3 {
-        margin-top: 2em;
-    }
+    .materialy {
+        gap: 2em;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
 
-    p {
-        margin: 1em 0;
-    }
+        .material {
 
-    ul {
-        padding-left: 2.5em;
-        
-        li {
-            margin: 1em 0;
+            a {
+                text-decoration: none;
+
+                h2 {
+                    mark {
+                        color: $purple;
+                        background-color: $turquoise;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    h2 mark {
+                        color: $turquoise;
+                        background-color: $purple;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: 62em) {
+                grid-template-rows: auto;
+                grid-template-columns: 3fr 7fr;
+            }
         }
+    }
+
+    @media only screen and (min-width: 62em) {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
     }
 }
 

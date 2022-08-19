@@ -337,7 +337,7 @@ header #menu-toggle.close .line::after {
   }
 }
 
-h1.heading {
+h1.heading.index {
   font-size: 3rem;
   text-align: center;
   margin: 2em 0;
@@ -359,148 +359,159 @@ h1.heading {
   }
 }
 
-main {
+main.main-index {
   margin: 2em 0;
 }
 
-main section {
+main.main-index section {
   margin: 2em 0;
 }
 
-main section h2 {
+main.main-index section h2 {
   color: #533ffc;
   text-align: center;
   margin-bottom: 1em;
 }
 
-main section p {
+main.main-index section p {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 36em) {
-  main section {
+  main.main-index section {
     margin: 3em 0;
   }
 }
 
 @media only screen and (min-width: 62em) {
-  main section {
+  main.main-index section {
     margin: 4em 0;
   }
 }
 
-main section.section-1 .section-1__grid {
+main.main-index section.section-1 .section-1__grid {
   gap: 2em;
   display: grid;
   margin-top: 2em;
   grid-template-columns: repeat(1, 1fr);
 }
 
-main section.section-1 .section-1__grid i {
+main.main-index section.section-1 .section-1__grid i {
   display: block;
   margin-bottom: 1em;
 }
 
-main section.section-1 .section-1__grid i::before {
+main.main-index section.section-1 .section-1__grid i::before {
   display: block;
   color: #533ffc;
   font-size: 3.5rem;
   text-align: center;
 }
 
-main section.section-1 .section-1__grid p {
+main.main-index section.section-1 .section-1__grid p {
   color: #533ffc;
   font-family: "Michroma", sans-serif;
   font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 36em) {
-  main section.section-1 .section-1__grid {
+  main.main-index section.section-1 .section-1__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media only screen and (min-width: 62em) {
-  main section.section-1 .section-1__grid {
+  main.main-index section.section-1 .section-1__grid {
     width: 90%;
     margin: 2em auto 0 auto;
   }
 }
 
 @media only screen and (min-width: 75em) {
-  main section.section-1 .section-1__grid {
+  main.main-index section.section-1 .section-1__grid {
     width: 80%;
   }
 }
 
 @media only screen and (min-width: 36em) {
-  main {
+  main.main-index {
     margin: 2em 0;
   }
 }
 
 @media only screen and (min-width: 62em) {
-  main {
+  main.main-index {
     margin: 3em 0;
   }
 }
 
 @media only screen and (min-width: 75em) {
-  main {
+  main.main-index {
     margin: 4em 0;
   }
 }
 
-.materialy {
-  gap: 2em;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-.materialy .material {
-  gap: 1em;
+main.main-materialy {
+  gap: 4em;
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
 }
 
-.materialy .material a {
+main.main-materialy .heading-page {
+  padding: 3em 0;
+  background-color: #98f9ff;
+}
+
+main.main-materialy .heading-page h1 {
+  color: #533ffc;
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 62em) {
+  main.main-materialy .heading-page {
+    height: calc(100vh - 9.75em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+main.main-materialy .materialy {
+  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+main.main-materialy .materialy .material a {
   text-decoration: none;
 }
 
-.materialy .material a h2 mark {
+main.main-materialy .materialy .material a h2 mark {
   color: #533ffc;
   background-color: #98f9ff;
 }
 
-.materialy .material a:hover h2 mark, .materialy .material a:focus h2 mark {
+main.main-materialy .materialy .material a:hover h2 mark, main.main-materialy .materialy .material a:focus h2 mark {
   color: #98f9ff;
   background-color: #533ffc;
 }
 
 @media only screen and (min-width: 62em) {
-  .materialy .material {
+  main.main-materialy .materialy .material {
     grid-template-rows: auto;
     grid-template-columns: 3fr 7fr;
   }
 }
 
-main.material h3 {
-  margin-top: 2em;
-}
-
-main.material p {
-  margin: 1em 0;
-}
-
-main.material ul {
-  padding-left: 2.5em;
-}
-
-main.material ul li {
-  margin: 1em 0;
+@media only screen and (min-width: 62em) {
+  main.main-materialy {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 footer {
