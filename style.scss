@@ -464,30 +464,39 @@ main.main-index {
     }
 }
 
-// Materiály
-main.main-materialy {
+// Page styles
+.heading-page {
+    padding: 3em 0;
+    background-color: $turquoise;
+
+    h1 {
+        color: $purple;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 62em) {
+        height: calc(100vh - 9.75em);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+main.main-page {
     gap: 4em;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
 
-    .heading-page {
-        padding: 3em 0;
-        background-color: $turquoise;
-
-        h1 {
-            color: $purple;
-            font-size: 3rem;
-            text-align: center;
-        }
-
-        @media only screen and (min-width: 62em) {
-            height: calc(100vh - 9.75em);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    @media only screen and (min-width: 62em) {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
     }
+}
+
+// Materiály
+main.main-materialy {
 
     .materialy {
         gap: 2em;
@@ -520,11 +529,6 @@ main.main-materialy {
                 grid-template-columns: 3fr 7fr;
             }
         }
-    }
-
-    @media only screen and (min-width: 62em) {
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
     }
 }
 

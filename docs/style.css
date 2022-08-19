@@ -453,30 +453,37 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
-main.main-materialy {
-  gap: 4em;
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr;
-}
-
-main.main-materialy .heading-page {
+.heading-page {
   padding: 3em 0;
   background-color: #98f9ff;
 }
 
-main.main-materialy .heading-page h1 {
+.heading-page h1 {
   color: #533ffc;
   font-size: 3rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 62em) {
-  main.main-materialy .heading-page {
+  .heading-page {
     height: calc(100vh - 9.75em);
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+main.main-page {
+  gap: 4em;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 62em) {
+  main.main-page {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -504,13 +511,6 @@ main.main-materialy .materialy .material a:hover h2 mark, main.main-materialy .m
   main.main-materialy .materialy .material {
     grid-template-rows: auto;
     grid-template-columns: 3fr 7fr;
-  }
-}
-
-@media only screen and (min-width: 62em) {
-  main.main-materialy {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
   }
 }
 
