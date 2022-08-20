@@ -33,6 +33,10 @@ a {
   color: inherit;
 }
 
+.on-page-load {
+  transition: none !important;
+}
+
 .underline {
   text-decoration: underline;
   text-underline-offset: 0.1em;
@@ -48,10 +52,6 @@ a {
 .selection-turquoise br::selection {
   color: #533ffc;
   background-color: #98f9ff;
-}
-
-.on-page-load {
-  transition: none !important;
 }
 
 nav#menu {
@@ -401,7 +401,7 @@ h1.heading-index {
 }
 
 main.main-index {
-  margin: 2em 0;
+  margin: 2em 1em;
 }
 
 main.main-index section {
@@ -478,19 +478,22 @@ main.main-index section.section-1 .section-1__grid p {
 
 @media only screen and (min-width: 36em) {
   main.main-index {
-    margin: 2em 0;
+    width: 90%;
+    margin: 2em auto;
   }
 }
 
 @media only screen and (min-width: 62em) {
   main.main-index {
-    margin: 3em 0;
+    width: 75%;
+    margin: 3em auto;
   }
 }
 
 @media only screen and (min-width: 75em) {
   main.main-index {
-    margin: 4em 0;
+    width: 65%;
+    margin: 4em auto;
   }
 }
 
@@ -514,7 +517,7 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
-main.main-page {
+.container-page {
   gap: 4em;
   display: grid;
   grid-template-rows: auto auto;
@@ -522,37 +525,46 @@ main.main-page {
 }
 
 @media only screen and (min-width: 62em) {
-  main.main-page {
+  .container-page {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-main.main-materialy .materialy {
+.materialy {
   gap: 2em;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
 
-main.main-materialy .materialy .material a {
+.materialy .material a {
   text-decoration: none;
 }
 
-main.main-materialy .materialy .material a h2 mark {
+.materialy .material a h2 mark {
   color: #533ffc;
   background-color: #98f9ff;
 }
 
-main.main-materialy .materialy .material a:hover h2 mark, main.main-materialy .materialy .material a:focus h2 mark {
+.materialy .material a:hover h2 mark, .materialy .material a:focus h2 mark {
   color: #98f9ff;
   background-color: #533ffc;
 }
 
 @media only screen and (min-width: 62em) {
-  main.main-materialy .materialy .material {
+  .materialy .material {
     grid-template-rows: auto;
     grid-template-columns: 3fr 7fr;
   }
+}
+
+main.material ul {
+  padding-left: 2.5em;
+}
+
+main.material table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 footer {

@@ -19,7 +19,7 @@ $white: #fff;
 $purple: #533ffc;
 $turquoise: #98f9ff;
 
-// Basics
+// Basic styles
 * {
     margin: 0;
     padding: 0;
@@ -48,6 +48,11 @@ a {
     color: inherit;
 }
 
+// Global classes
+.on-page-load {
+    transition: none !important;
+}
+
 .underline {
     text-decoration: underline;
     text-underline-offset: 0.1em;
@@ -63,10 +68,6 @@ a {
 .selection-turquoise br::selection {
     color: $purple;
     background-color: $turquoise;
-}
-
-.on-page-load {
-    transition: none !important;
 }
 
 // Menu
@@ -409,9 +410,9 @@ h1.heading-index {
     }
 }
 
-// Main
+// Front-page main
 main.main-index {
-    margin: 2em 0;
+    margin: 2em 1em;
 
     // Sections
     section {
@@ -480,15 +481,18 @@ main.main-index {
     }
 
     @media only screen and (min-width: 36em) {
-        margin: 2em 0;
+        width: 90%;
+        margin: 2em auto;
     }
 
     @media only screen and (min-width: 62em) {
-        margin: 3em 0;
+        width: 75%;
+        margin: 3em auto;
     }
 
     @media only screen and (min-width: 75em) {
-        margin: 4em 0;
+        width: 65%;
+        margin: 4em auto;
     }
 }
 
@@ -511,7 +515,7 @@ main.main-index {
     }
 }
 
-main.main-page {
+.container-page {
     gap: 4em;
     display: grid;
     grid-template-rows: auto auto;
@@ -524,42 +528,52 @@ main.main-page {
 }
 
 // Materiály
-main.main-materialy {
+.materialy {
+    gap: 2em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 
-    .materialy {
-        gap: 2em;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+    .material {
 
-        .material {
+        a {
+            text-decoration: none;
 
-            a {
-                text-decoration: none;
-
-                h2 {
-                    mark {
-                        color: $purple;
-                        background-color: $turquoise;
-                    }
-                }
-
-                &:hover,
-                &:focus {
-                    h2 mark {
-                        color: $turquoise;
-                        background-color: $purple;
-                    }
+            h2 {
+                mark {
+                    color: $purple;
+                    background-color: $turquoise;
                 }
             }
 
-            @media only screen and (min-width: 62em) {
-                grid-template-rows: auto;
-                grid-template-columns: 3fr 7fr;
+            &:hover,
+            &:focus {
+                h2 mark {
+                    color: $turquoise;
+                    background-color: $purple;
+                }
             }
+        }
+
+        @media only screen and (min-width: 62em) {
+            grid-template-rows: auto;
+            grid-template-columns: 3fr 7fr;
         }
     }
 }
 
+// Materiál
+main.material {
+    ul {
+        padding-left: 2.5em;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
+
+// Footer
 footer {
     margin: 2em 1em;
 
