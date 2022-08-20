@@ -528,6 +528,7 @@ main.main-index section.section-1 .section-1__grid p {
   .container-page {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
+    padding-right: 4em;
   }
 }
 
@@ -558,6 +559,10 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
+main.material h3 {
+  margin: 1em 0 0.5em 0;
+}
+
 main.material ul {
   padding-left: 2.5em;
 }
@@ -565,6 +570,10 @@ main.material ul {
 main.material table {
   width: 100%;
   border-collapse: collapse;
+}
+
+main.material table td {
+  border: 1px solid #000;
 }
 
 footer {

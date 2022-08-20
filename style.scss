@@ -524,6 +524,7 @@ main.main-index {
     @media only screen and (min-width: 62em) {
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr;
+        padding-right: 4em;
     }
 }
 
@@ -563,6 +564,10 @@ main.main-index {
 
 // Materiál
 main.material {
+    h3 {
+        margin: 1em 0 0.5em 0;
+    }
+
     ul {
         padding-left: 2.5em;
     }
@@ -570,6 +575,10 @@ main.material {
     table {
         width: 100%;
         border-collapse: collapse;
+
+        td {
+            border: 1px solid $black;
+        }
     }
 }
 
