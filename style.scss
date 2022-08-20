@@ -498,7 +498,7 @@ main.main-index {
 
 // Page styles
 .heading-page {
-    padding: 3em 0;
+    padding: 4em 0;
     background-color: $turquoise;
 
     h1 {
@@ -521,6 +521,18 @@ main.main-index {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
 
+    main {
+        padding: 0 1em 4em 1em;
+
+        @media only screen and (min-width: 36em) {
+            padding: 0 2em 4em 2em;
+        }
+
+        @media only screen and (min-width: 62em) {
+            padding: 4em 4em 4em 0;
+        }
+    }
+
     @media only screen and (min-width: 62em) {
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr;
@@ -529,7 +541,7 @@ main.main-index {
 }
 
 // Materiály
-.materialy {
+main.materialy {
     gap: 2em;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -578,6 +590,59 @@ main.material {
 
         td {
             border: 1px solid $black;
+        }
+    }
+}
+
+// Kontakt
+main.kontakt {
+    #contact-form {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "fieldset-name""fieldset-email""fieldset-tel""fieldset-subject""fieldset-message""button";
+
+        * {
+            display: block;
+        }
+
+        fieldset {
+            border: none;
+
+            input,
+            textarea {
+                width: 100%;
+            }
+
+            &#fieldset-name {
+                grid-area: fieldset-name;
+            }
+
+            &#fieldset-email {
+                grid-area: fieldset-email;
+            }
+
+            &#fieldset-tel {
+                grid-area: fieldset-tel;
+            }
+
+            &#fieldset-subject {
+                grid-area: fieldset-subject;
+            }
+
+            &#fieldset-message {
+                grid-area: fieldset-message;
+            }
+        }
+
+        button {
+            grid-area: button;
+        }
+
+        @media only screen and (min-width: 36em) {
+            grid-template-rows: auto auto auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "fieldset-name fieldset-email""fieldset-tel fieldset-subject""fieldset-message fieldset-message""button button";
         }
     }
 }

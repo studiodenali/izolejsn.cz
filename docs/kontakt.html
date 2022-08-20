@@ -41,6 +41,29 @@
             <h1>kontakt</h1>
         </div>
         <main class="kontakt">
+            <form method="POST" action="./send-mail.php" id="contact-form">
+                <fieldset id="fieldset-name">
+                    <label for="name">Jméno a příjmení</label>
+                    <input type="text" name="name" id="name" required>
+                </fieldset>
+                <fieldset id="fieldset-email">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required>
+                </fieldset>
+                <fieldset id="fieldset-tel">
+                    <label for="tel">Telefonní číslo</label>
+                    <input type="tel" name="tel" id="tel">
+                </fieldset>
+                <fieldset id="fieldset-subject">
+                    <label for="subject">Předmět</label>
+                    <input type="text" name="subject" id="subject" required>
+                </fieldset>
+                <fieldset id="fieldset-message">
+                    <label for="message">Zpráva</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </fieldset>
+                <button type="submit">Odeslat</button>
+            </form>
         </main>
     </div>
     <script src="./script.js"></script>

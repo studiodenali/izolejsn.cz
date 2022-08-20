@@ -498,7 +498,7 @@ main.main-index section.section-1 .section-1__grid p {
 }
 
 .heading-page {
-  padding: 3em 0;
+  padding: 4em 0;
   background-color: #98f9ff;
 }
 
@@ -524,6 +524,22 @@ main.main-index section.section-1 .section-1__grid p {
   grid-template-columns: 1fr;
 }
 
+.container-page main {
+  padding: 0 1em 4em 1em;
+}
+
+@media only screen and (min-width: 36em) {
+  .container-page main {
+    padding: 0 2em 4em 2em;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .container-page main {
+    padding: 4em 4em 4em 0;
+  }
+}
+
 @media only screen and (min-width: 62em) {
   .container-page {
     grid-template-rows: auto;
@@ -532,28 +548,28 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
-.materialy {
+main.materialy {
   gap: 2em;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
 
-.materialy .material a {
+main.materialy .material a {
   text-decoration: none;
 }
 
-.materialy .material a h2 mark {
+main.materialy .material a h2 mark {
   color: #533ffc;
   background-color: #98f9ff;
 }
 
-.materialy .material a:hover h2 mark, .materialy .material a:focus h2 mark {
+main.materialy .material a:hover h2 mark, main.materialy .material a:focus h2 mark {
   color: #98f9ff;
   background-color: #533ffc;
 }
 
 @media only screen and (min-width: 62em) {
-  .materialy .material {
+  main.materialy .material {
     grid-template-rows: auto;
     grid-template-columns: 3fr 7fr;
   }
@@ -574,6 +590,58 @@ main.material table {
 
 main.material table td {
   border: 1px solid #000;
+}
+
+main.kontakt #contact-form {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "fieldset-name" "fieldset-email" "fieldset-tel" "fieldset-subject" "fieldset-message" "button";
+}
+
+main.kontakt #contact-form * {
+  display: block;
+}
+
+main.kontakt #contact-form fieldset {
+  border: none;
+}
+
+main.kontakt #contact-form fieldset input,
+main.kontakt #contact-form fieldset textarea {
+  width: 100%;
+}
+
+main.kontakt #contact-form fieldset#fieldset-name {
+  grid-area: fieldset-name;
+}
+
+main.kontakt #contact-form fieldset#fieldset-email {
+  grid-area: fieldset-email;
+}
+
+main.kontakt #contact-form fieldset#fieldset-tel {
+  grid-area: fieldset-tel;
+}
+
+main.kontakt #contact-form fieldset#fieldset-subject {
+  grid-area: fieldset-subject;
+}
+
+main.kontakt #contact-form fieldset#fieldset-message {
+  grid-area: fieldset-message;
+}
+
+main.kontakt #contact-form button {
+  grid-area: button;
+}
+
+@media only screen and (min-width: 36em) {
+  main.kontakt #contact-form {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "fieldset-name fieldset-email" "fieldset-tel fieldset-subject" "fieldset-message fieldset-message" "button button";
+  }
 }
 
 footer {

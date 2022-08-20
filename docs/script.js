@@ -36,7 +36,7 @@ btn.onclick = function () {
 };
 
 // Selection
-document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, a, li, mark").forEach(element => {
+document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, a, li, td, mark, sup").forEach(element => {
     const color = window.getComputedStyle(element).color;
 
     if (color === "rgb(0, 0, 0)") {
