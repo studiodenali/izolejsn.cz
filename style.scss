@@ -397,16 +397,62 @@ h1.heading-index {
 
 // Hero
 .hero {
-    height: 60%;
+    height: 45em;
+    position: relative;
     padding-right: calc(-1 * (100vw - 100%));
     background-image: url("./images/hero.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 
-    @media (min-width: 62em) {
-        background-attachment: fixed;
+    .hero__container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        .hero__content {
+            width: 80%;
+            height: 50;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 25%;
+            left: 20%;
+            right: 20%;
+            background-color: $white;
+        }
+    }
+
+    @media only screen and (min-width: 62em) {
+        height: 400%;
+        background-size: cover;
+
+        .hero__container {
+            width: 100%;
+            height: 70%;
+            position: absolute;
+            top: 15%;
+            right: 0;
+            bottom: 15%;
+            left: 0;
+    
+            .hero__content {
+                width: 60%;
+                height: 50vh;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 25vh;
+                left: 20%;
+                right: 20%;
+                overflow: hidden;
+                background-color: $white;
+
+            }
+        }
     }
 }
 
