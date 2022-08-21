@@ -12,12 +12,12 @@ const btn = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
 btn.onclick = function () {
+    const scrollY = window.scrollY;
+
     if (!menuOpen) {
         btn.classList.add("open");
         menu.classList.add("open");
         document.querySelector(".overlay").classList.add("open");
-
-        document.documentElement.style.overflowY = "hidden";
 
         menuOpen = true;
     } else if (menuOpen) {
@@ -25,8 +25,6 @@ btn.onclick = function () {
         btn.classList.add("close");
         btn.classList.remove("open");
         document.querySelector(".overlay").classList.remove("open");
-
-        document.documentElement.style.overflowY = "auto";
 
         setTimeout(() => {
             btn.classList.remove("close");
