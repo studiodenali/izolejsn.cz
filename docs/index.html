@@ -41,11 +41,9 @@
             <h1>máte vysoké účty<br>za vytápění?</h1>
         </div>
     </header>
-    <div class="hero">
-        <div class="hero__container">
-            <div class="hero__content">
-                <h1>Content</h1>
-            </div>
+    <div id="hero">
+        <div id="hero__content">
+            <h1>máme pro vás řešení</h1>
         </div>
     </div>
     <main class="main-index">
@@ -99,6 +97,22 @@
         </p>
     </footer>
     <script src="./script.js"></script>
+    <script>
+        function hero() {
+            const hero = document.getElementById("hero");
+            const headerHeight = document.querySelector(".header-index").clientHeight;
+
+            let windowHeight = window.innerHeight;
+            hero.style.height = windowHeight * 1.2 + "px";
+
+            addEventListener("resize", function () {
+                windowHeight = window.innerHeight;
+                hero.style.height = windowHeight + headerHeight + "px";
+            });
+        };
+
+        hero();
+    </script>
 </body>
 
 </html>
