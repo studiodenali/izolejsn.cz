@@ -494,6 +494,37 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
+main.main-index .section-2__grid {
+  gap: 2em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+main.main-index .section-2__grid #description {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #533ffc;
+}
+
+main.main-index .section-2__grid #description .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 1em;
+  color: #fff;
+  transition: opacity 100ms ease-in-out 100ms;
+}
+
+@media only screen and (min-width: 36em) {
+  main.main-index .section-2__grid {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media only screen and (min-width: 36em) {
   main.main-index {
     width: 90%;

@@ -42,7 +42,6 @@ document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, a, li, td, mark, sup").for
     } else if (color === "rgb(83, 63, 252)") {
         element.classList.add("selection");
     } else if (color === "rgb(152, 249, 255)") {
-        console.log("hello")
         element.classList.add("selection-turquoise");
     };
 });

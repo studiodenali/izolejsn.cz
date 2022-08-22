@@ -457,7 +457,7 @@ main.main-index {
         }
     }
 
-    // Section 2
+    // Section 1
     section.section-1 {
         .section-1__grid {
             gap: 2em;
@@ -495,6 +495,36 @@ main.main-index {
             @media only screen and (min-width: 75em) {
                 width: 80%;
             }
+        }
+    }
+
+    // Section 2
+    .section-2__grid {
+        gap: 2em;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        #description {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: $purple;
+
+            .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                padding: 1em;
+                color: $white;
+                transition: opacity 100ms ease-in-out 100ms;
+            }
+        }
+
+        @media only screen and (min-width: 36em) {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
         }
     }
 
