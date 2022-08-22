@@ -528,6 +528,10 @@ main.main-index {
         }
     }
 
+    .value {
+        display: none;
+    }
+
     @media only screen and (min-width: 36em) {
         width: 90%;
         margin: 2em auto;

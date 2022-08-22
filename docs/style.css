@@ -525,6 +525,10 @@ main.main-index .section-2__grid #description .content {
   }
 }
 
+main.main-index .value {
+  display: none;
+}
+
 @media only screen and (min-width: 36em) {
   main.main-index {
     width: 90%;
