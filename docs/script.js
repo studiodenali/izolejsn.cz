@@ -10,21 +10,38 @@ let width = window.innerWidth - document.documentElement.clientWidth;
 let menuOpen = false;
 const btn = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+const mask = document.getElementById("mask");
 
 btn.onclick = function () {
-    const scrollY = window.scrollY;
-
     if (!menuOpen) {
         btn.classList.add("open");
         menu.classList.add("open");
-        document.querySelector(".overlay").classList.add("open");
+        overlay.classList.add("open");
+        mask.classList.add("open");
 
         menuOpen = true;
     } else if (menuOpen) {
         menu.classList.remove("open");
         btn.classList.add("close");
         btn.classList.remove("open");
-        document.querySelector(".overlay").classList.remove("open");
+        overlay.classList.remove("open");
+        mask.classList.remove("open");
+
+        setTimeout(() => {
+            btn.classList.remove("close");
+        }, "500");
+        menuOpen = false;
+    };
+};
+
+overlay.onclick = function() {
+    if (menuOpen) {
+        menu.classList.remove("open");
+        btn.classList.add("close");
+        btn.classList.remove("open");
+        overlay.classList.remove("open");
+        mask.classList.remove("open");
 
         setTimeout(() => {
             btn.classList.remove("close");

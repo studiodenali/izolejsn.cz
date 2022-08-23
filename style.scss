@@ -139,7 +139,16 @@ nav#menu {
     }
 }
 
-.overlay {
+#mask.open {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+#overlay {
     width: 100%;
     height: 100%;
     display: none;
@@ -150,10 +159,9 @@ nav#menu {
     opacity: 0;
     background-color: rgba(84, 63, 252, 0.4);
     backdrop-filter: blur(5px);
-    pointer-events: none;
     transition: opacity 500ms ease-in-out;
 
-    .overlay__white {
+    #overlay__white {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -165,7 +173,6 @@ nav#menu {
     }
 
     &.open {
-        z-index: 1;
         opacity: 1;
     }
 
@@ -222,6 +229,15 @@ header.header-page {
     }
 
     // Menu
+    #menu-toggle {
+        -khtml-user-select: all !important;
+        -o-user-select: all !important;
+        -moz-user-select: all !important;
+        -webkit-user-select: all !important;
+        user-select: all !important;
+        pointer-events: auto !important;
+    }
+
     @media only screen and (max-width: 36em) {
         #menu-toggle {
             width: 2.5em;
