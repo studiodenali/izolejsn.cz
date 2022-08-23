@@ -15,7 +15,6 @@ function house() {
     const house = document.getElementById("house__svg");
 
     house.querySelectorAll(".house__part").forEach((part) => {
-        const info = document.getElementById("info");
         const description = document.getElementById(part.dataset.house);
 
         function reset() {
