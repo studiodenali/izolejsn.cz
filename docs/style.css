@@ -757,46 +757,68 @@ main.main-index .section-3__grid h3 {
 }
 
 main.main-index .section-3__grid #uspora-info {
+  height: 20em;
   position: relative;
 }
 
 main.main-index .section-3__grid #uspora-info .content {
   width: 100%;
+  height: 20em;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 10em 10em;
   grid-template-columns: 1fr;
   position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
   opacity: 0;
-  padding: 2em;
-  background-color: #533ffc;
 }
 
-main.main-index .section-3__grid #uspora-info .content p {
-  color: #fff;
-}
-
-main.main-index .section-3__grid #uspora-info .content p.value {
+main.main-index .section-3__grid #uspora-info .content .value,
+main.main-index .section-3__grid #uspora-info .content .estimate {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2em;
+}
+
+main.main-index .section-3__grid #uspora-info .content .value {
+  background-color: #98f9ff;
+}
+
+main.main-index .section-3__grid #uspora-info .content .value p {
+  color: #533ffc;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-main.main-index .section-3__grid #uspora-info .content p.estimate mark {
+main.main-index .section-3__grid #uspora-info .content .estimate {
+  background-color: #533ffc;
+}
+
+main.main-index .section-3__grid #uspora-info .content .estimate p {
+  color: #98f9ff;
+}
+
+main.main-index .section-3__grid #uspora-info .content .estimate p mark {
   color: #533ffc;
   background-color: #98f9ff;
   padding: 0.1em 0.2em;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 36em) {
   main.main-index .section-3__grid #uspora-info .content {
+    height: 10em;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 36em) {
+  main.main-index .section-3__grid #uspora-info {
+    height: 10em;
   }
 }
 

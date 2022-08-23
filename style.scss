@@ -776,47 +776,64 @@ main.main-index {
         }
 
         #uspora-info {
+            height: 20em;
             position: relative;
 
             .content {
                 width: 100%;
+                height: 20em;
                 display: grid;
-                grid-template-rows: auto auto;
+                grid-template-rows: 10em 10em;
                 grid-template-columns: 1fr;
                 position: absolute;
                 top: 0;
                 left: 0;
                 visibility: hidden;
                 opacity: 0;
-                padding: 2em;
-                background-color: $purple;
 
-                p {
-                    color: $white;
+                .value,
+                .estimate {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 2em;
+                }
 
-                    &.value {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                .value {
+                    background-color: $turquoise;
+
+                    p {
+                        color: $purple;
                         font-size: 1.5rem;
                         font-weight: bold;
                     }
+                }
 
-                    &.estimate {
+                .estimate {
+                    background-color: $purple;
+
+                    p {
+                        color: $turquoise;
 
                         mark {
                             color: $purple;
                             background-color: $turquoise;
                             padding: 0.1em 0.2em;
                             font-weight: bold;
+                            white-space: nowrap;
                         }
                     }
                 }
 
                 @media only screen and (min-width: 36em) {
+                    height: 10em;
                     grid-template-rows: auto;
                     grid-template-columns: 1fr 1fr;
                 }
+            }
+
+            @media only screen and (min-width: 36em) {
+                height: 10em;
             }
         }
 
