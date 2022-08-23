@@ -1,10 +1,7 @@
 // On page load
 document.querySelectorAll(".on-page-load").forEach((element) => {
     element.classList.remove("on-page-load");
-})
-
-// Width
-let width = window.innerWidth - document.documentElement.clientWidth;
+});
 
 // Menu
 let menuOpen = false;
