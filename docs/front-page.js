@@ -22,7 +22,7 @@ function house() {
                 part.style.fill = "#543ffc";
             });
 
-            document.querySelectorAll(".content").forEach((description) => {
+            document.querySelectorAll("#descriptions .description").forEach((description) => {
                 description.style.visibility = "hidden";
                 description.style.opacity = "0";
             });

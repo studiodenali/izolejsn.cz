@@ -736,13 +736,13 @@ main.main-index {
             transition: fill 100ms ease-in-out;
         }
 
-        #description {
+        #descriptions {
             width: 100%;
             height: 100%;
             position: relative;
             background-color: $purple;
 
-            .content {
+            .description {
                 width: 100%;
                 height: 100%;
                 position: absolute;
