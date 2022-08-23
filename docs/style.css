@@ -879,6 +879,7 @@ main.main-index .section-3__grid #uspora-info .content .estimate p mark {
 }
 
 .container-page {
+  min-height: calc(100vh - 9.75em);
   gap: 4em;
   display: grid;
   grid-template-rows: auto auto auto;
@@ -984,6 +985,10 @@ main.material table {
 
 main.material table td {
   border: 1px solid #000;
+}
+
+main.o-nas img {
+  width: 100%;
 }
 
 main.kontakt #contact-form {

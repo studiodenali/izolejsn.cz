@@ -892,6 +892,7 @@ main.main-index {
 
 // Page styles
 .container-page {
+    min-height: calc(100vh - 9.75em);
     gap: 4em;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -998,6 +999,13 @@ main.material {
         td {
             border: 1px solid $black;
         }
+    }
+}
+
+// O nás
+main.o-nas {
+    img {
+        width: 100%;
     }
 }
 
