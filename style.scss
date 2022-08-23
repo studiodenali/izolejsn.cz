@@ -891,32 +891,36 @@ main.main-index {
 }
 
 // Page styles
-.heading-page {
-    padding: 4em 0;
-    background-color: $turquoise;
-
-    h1 {
-        color: $purple;
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    @media only screen and (min-width: 62em) {
-        height: calc(100vh - 9.75em);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 .container-page {
     gap: 4em;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
+    grid-template-areas: "page__heading""page__main""page__footer";
+
+    .heading-page {
+        padding: 4em 0;
+        background-color: $turquoise;
+        grid-area: page__heading;
+
+        h1 {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $purple;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 62em) {
+            display: flex;
+            justify-content: center;
+        }
+    }
 
     main {
         padding: 0 1em 4em 1em;
+        grid-area: page__main;
 
         @media only screen and (min-width: 36em) {
             padding: 0 2em 4em 2em;
@@ -927,9 +931,14 @@ main.main-index {
         }
     }
 
+    footer {
+        grid-area: page__footer;
+    }
+
     @media only screen and (min-width: 62em) {
-        grid-template-rows: auto;
+        grid-template-rows: auto auto;
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "page__heading page__main""page__heading page__footer";
         padding-right: 4em;
     }
 }
@@ -976,6 +985,10 @@ main.material {
 
     ul {
         padding-left: 2.5em;
+
+        li {
+            margin: 0.5em 0;
+        }
     }
 
     table {
