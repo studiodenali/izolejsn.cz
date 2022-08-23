@@ -644,8 +644,6 @@ main.main-index {
         }
 
         p {
-            font-family: $secondary-font;
-            font-size: 1.2rem;
             text-align: center;
         }
 
@@ -706,6 +704,11 @@ main.main-index {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
 
+        #house #house__svg .house__part {
+            cursor: pointer;
+            transition: fill 100ms ease-in-out;
+        }
+
         #description {
             width: 100%;
             height: 100%;
@@ -713,13 +716,46 @@ main.main-index {
             background-color: $purple;
 
             .content {
+                width: 100%;
+                height: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
+                visibility: hidden;
                 opacity: 0;
                 padding: 1em;
                 color: $white;
-                transition: opacity 100ms ease-in-out 100ms;
+                transition: opacity 100ms ease-in-out;
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.7em;
+
+                    mark {
+                        color: $purple;
+                        background-color: $turquoise;
+                        padding: 0.1em 0.3em;
+                    }
+                }
+
+                p {
+                    text-align: left;
+                }
+
+                &#info {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-size: 1.2rem;
+                        text-align: center;
+                    }
+                }
+
+                @media only screen and (min-width: 62em) {
+                    padding: 2em;
+                }
             }
         }
 

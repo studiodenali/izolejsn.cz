@@ -615,8 +615,6 @@ main.main-index section h2 {
 }
 
 main.main-index section p {
-  font-family: "Quicksand", sans-serif;
-  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -683,6 +681,11 @@ main.main-index .section-2__grid {
   grid-template-columns: 1fr;
 }
 
+main.main-index .section-2__grid #house #house__svg .house__part {
+  cursor: pointer;
+  transition: fill 100ms ease-in-out;
+}
+
 main.main-index .section-2__grid #description {
   width: 100%;
   height: 100%;
@@ -691,13 +694,48 @@ main.main-index .section-2__grid #description {
 }
 
 main.main-index .section-2__grid #description .content {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  visibility: hidden;
   opacity: 0;
   padding: 1em;
   color: #fff;
-  transition: opacity 100ms ease-in-out 100ms;
+  transition: opacity 100ms ease-in-out;
+}
+
+main.main-index .section-2__grid #description .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.7em;
+}
+
+main.main-index .section-2__grid #description .content h3 mark {
+  color: #533ffc;
+  background-color: #98f9ff;
+  padding: 0.1em 0.3em;
+}
+
+main.main-index .section-2__grid #description .content p {
+  text-align: left;
+}
+
+main.main-index .section-2__grid #description .content#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.main-index .section-2__grid #description .content#info p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 62em) {
+  main.main-index .section-2__grid #description .content {
+    padding: 2em;
+  }
 }
 
 @media only screen and (min-width: 36em) {

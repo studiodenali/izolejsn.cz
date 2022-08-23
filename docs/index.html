@@ -87,15 +87,16 @@
                         <path
                             d="M1379.92,433.794l-643.739,-433.794l-643.739,435.508l0,373.155l137.286,0l0.227,25.026l37.845,-0.042l280.428,-193.796l758.485,-25.677l73.207,-0l0,-180.38Z"
                             style="fill-opacity:0.1;" />
-                        <path id="strop1" class="house" d="M1309.92,614.174l-782.068,-0l0,40l782.068,-0l0,-40Z"
+                        <path id="strop1" class="house__part" d="M1309.92,614.174l-782.068,-0l0,40l782.068,-0l0,-40Z"
                             style="fill:#543ffc;" data-house="strop" />
-                        <rect id="podlaha1" class="house" x="92.447" y="1022.99" width="1287.48" height="40"
+                        <rect id="podlaha1" class="house__part" x="92.447" y="1022.99" width="1287.48" height="40"
                             style="fill:#543ffc;" data-house="podlaha" />
-                        <rect id="zaklady1" class="house" x="92.447" y="1063.11" width="1287.48" height="69.88"
+                        <rect id="zaklady1" class="house__part" x="92.447" y="1063.11" width="1287.48" height="69.88"
                             style="fill:#543ffc;fill-opacity:0.25;" data-house="zaklady" />
-                        <path id="stena2" class="house" d="M92.447,467.665l0,525.196l40,0.132l0,-548.436l-40,23.108Z"
-                            style="fill:#543ffc;" data-house="stena" />
-                        <path id="stena1" class="house" serif:id="stena"
+                        <path id="stena2" class="house__part"
+                            d="M92.447,467.665l0,525.196l40,0.132l0,-548.436l-40,23.108Z" style="fill:#543ffc;"
+                            data-house="stena" />
+                        <path id="stena1" class="house__part" serif:id="stena"
                             d="M1379.92,467.665l0,301.196l-40,0.132l0,-324.436l40,23.108Z" style="fill:#543ffc;"
                             data-house="stena" />
                         <rect x="1043.15" y="768.993" width="127.723" height="254" style="fill-opacity:0.1;" />
@@ -120,25 +121,53 @@
                             style="fill-opacity:0.1;" />
                         <path d="M1143.2,512.32l-19.703,-0l3.164,23.526l13.374,0l3.165,-23.526Z"
                             style="fill-opacity:0.1;" />
-                        <path id="podkrovi1" class="house"
+                        <path id="podkrovi1" class="house__part"
                             d="M1131.99,284.068l-395.801,-231.068l-395.801,231.068l791.602,-0Z"
                             style="fill:#543ffc;fill-opacity:0.25;" data-house="podkrovi" />
-                        <path id="strecha1" class="house"
+                        <path id="strecha1" class="house__part"
                             d="M1472.37,435.324l-736.186,-435.324l-736.186,435.324l0,55.845l736.186,-426.056l736.186,424.295l0,-54.084Z"
                             style="fill:#543ffc;" data-house="strecha" />
                     </svg>
                 </div>
                 <div id="description">
-                    <div id="info" class="content" style="opacity: 1;">
-                        <h1>Najeďte na zvýrazněnou část domu.</h1>
+                    <div id="info" class="content" style="visibility: visible; opacity: 1;">
+                        <p>Klikněte na zvýrazněnou část domu.</p>
                     </div>
-                    <div id="strecha" class="content">střecha</div>
-                    <div id="podkrovi" class="content">podkrovi</div>
-                    <div id="zaklady" class="content">zaklady</div>
-                    <div id="strop" class="content">strop</div>
-                    <div id="stena" class="content">stěna</div>
-                    <div id="podlaha" class="content">podlaha</div>
-                    <div id="zaklady" class="content">zaklady</div>
+                    <div id="strecha" class="content">
+                        <h3><mark>střecha</mark></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptatum esse assumenda
+                            laboriosam sint, fugiat ipsam laudantium ipsum odio consequuntur?</p>
+                    </div>
+                    <div id="podkrovi" class="content">
+                        <h3><mark>podkroví</mark></h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum saepe dicta voluptas, amet
+                            repellat recusandae sequi beatae corrupti totam nemo.</p>
+                    </div>
+                    <div id="zaklady" class="content">
+                        <h3><mark>základy</mark></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse architecto tempora fugit.
+                            Facilis ex possimus laboriosam hic. Maxime, nemo reiciendis!</p>
+                    </div>
+                    <div id="strop" class="content">
+                        <h3><mark>strop</mark></h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consequatur iusto modi a
+                            ducimus officiis impedit, explicabo error cumque hic.</p>
+                    </div>
+                    <div id="stena" class="content">
+                        <h3><mark>stěna</mark></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis temporibus corrupti
+                            voluptatem quibusdam nostrum omnis id unde animi quo quidem.</p>
+                    </div>
+                    <div id="podlaha" class="content">
+                        <h3><mark>podlaha</mark></h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae corporis harum corrupti ad
+                            alias vero dolores molestias dicta provident dolorum.</p>
+                    </div>
+                    <div id="zaklady" class="content">
+                        <h3><mark>základy</mark></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odit ducimus distinctio nam
+                            quas laboriosam eum animi neque, tenetur nesciunt.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -215,31 +244,31 @@
         function house() {
             const house = document.getElementById("house__svg");
 
-            house.querySelectorAll(".house").forEach((part) => {
+            house.querySelectorAll(".house__part").forEach((part) => {
                 const info = document.getElementById("info");
                 const description = document.getElementById(part.dataset.house);
 
-                part.onmouseover = function () {
-                    house.querySelectorAll("[data-house='" + part.dataset.house + "']").forEach((element) => {
-                        element.style.fill = "#98f9ff";
-                    })
-
-                    info.style.opacity = "0";
-
-                    if (description) {
-                        description.style.opacity = "1";
-                    };
-                }
-
-                part.onmouseout = function () {
-                    house.querySelectorAll("[data-house='" + part.dataset.house + "']").forEach((element) => {
-                        element.style.fill = "#543ffc";
+                function reset() {
+                    house.querySelectorAll(".house__part").forEach((part) => {
+                        part.style.fill = "#543ffc";
                     });
 
-                    info.style.opacity = "1";
+                    document.querySelectorAll(".content").forEach((description) => {
+                        description.style.visibility = "hidden";
+                        description.style.opacity = "0";
+                    });
+                };
+
+                part.onclick = function () {
+                    reset();
+
+                    house.querySelectorAll("[data-house='" + part.dataset.house + "']").forEach((element) => {
+                        element.style.fill = "#98f9ff";
+                    });
 
                     if (description) {
-                        description.style.opacity = "0";
+                        description.style.visibility = "visible";
+                        description.style.opacity = "1";
                     };
                 }
             });
