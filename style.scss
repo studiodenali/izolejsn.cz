@@ -188,165 +188,320 @@ header.header-page {
     background-color: $purple;
 
     #logo {
-        width: 17em;
-        height: 5.75em;
+        width: 13em;
+        height: 3.89875em;
         display: flex;
         align-items: center;
 
         img {
-            width: 17em;
+            width: 13em;
             display: block;
-        }
-    }
 
-    // Menu
-    #menu-toggle {
-        width: 3.75em;
-        height: 3.75em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 2em;
-        right: 2em;
-        z-index: 2;
-        padding: 1em;
-        border-radius: 4em;
-        box-sizing: content-box;
-        background-color: $turquoise;
-        cursor: pointer;
-
-        .line {
-            display: block;
-            width: 3.125em;
-            height: 0.0625em;
-            position: relative;
-            margin: auto;
-            border: none;
-            background-color: $purple;
-            color: inherit;
-            transition: background-color 350ms;
-
-            &::before,
-            &::after {
-                content: "";
-                width: 100%;
-                height: 0.0625em;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 50%;
-                background-color: $purple;
-                transform-origin: 50% 0%;
-            }
-
-            &::before {
-                transform: translate(-50%, -0.875em);
-            }
-
-            &::after {
-                transform: translate(-50%, 0.875em);
-            }
-
-            @keyframes menuBeforeOpen {
-                0% {
-                    transform: translate(-50%, -0.875em);
-                }
-
-                40% {
-                    transform: translate(-50%, 0);
-                }
-
-                60% {
-                    transform: translate(-50%, 0);
-                }
-
-                100% {
-                    transform: translate(-50%, 0) rotate(45deg);
-                }
-            }
-
-            @keyframes menuAfterOpen {
-                0% {
-                    transform: translate(-50%, 0.875em);
-                }
-
-                40% {
-                    transform: translate(-50%, 0);
-                }
-
-                60% {
-                    transform: translate(-50%, 0);
-                }
-
-                100% {
-                    transform: translate(-50%, 0) rotate(-45deg);
-                }
-            }
-
-            @keyframes menuBeforeClose {
-                0% {
-                    transform: translate(-50%, 0) rotate(45deg);
-                }
-
-                40% {
-                    transform: translate(-50%, 0);
-                }
-
-                60% {
-                    transform: translate(-50%, 0);
-                }
-
-                100% {
-                    transform: translate(-50%, -0.875em);
-                }
-            }
-
-            @keyframes menuAfterClose {
-                0% {
-                    transform: translate(-50%, 0) rotate(-45deg);
-                }
-
-                40% {
-                    transform: translate(-50%, 0);
-
-                }
-
-                60% {
-                    transform: translate(-50%, 0);
-                }
-
-                100% {
-                    transform: translate(-50%, 0.875em);
-                }
-            }
-        }
-
-        &.open .line {
-            background-color: transparent;
-
-            &::before {
-                animation: menuBeforeOpen 500ms forwards;
-            }
-
-            &::after {
-                animation: menuAfterOpen 500ms forwards;
-            }
-        }
-
-        &.close .line {
-
-            &::before {
-                animation: menuBeforeClose 500ms forwards;
-            }
-
-            &::after {
-                animation: menuAfterClose 500ms forwards;
+            @media only screen and (min-width: 36em) {
+                width: 17em;
             }
         }
 
         @media only screen and (min-width: 36em) {
-            right: 5%;
+            width: 17em;
+            height: 5.75em;
+        }
+    }
+
+    // Menu
+    @media only screen and (max-width: 36em) {
+        #menu-toggle {
+            width: 2.5em;
+            height: 2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 1em;
+            right: 1em;
+            z-index: 2;
+            padding: 0.7em;
+            border-radius: 4em;
+            box-sizing: content-box;
+            background-color: $turquoise;
+            cursor: pointer;
+
+            .line {
+                display: block;
+                width: 2.075em;
+                height: 0.0625em;
+                position: relative;
+                margin: auto;
+                border: none;
+                background-color: $purple;
+                color: inherit;
+                transition: background-color 350ms;
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 0.0625em;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    background-color: $purple;
+                    transform-origin: 50% 0%;
+                }
+
+                &::before {
+                    transform: translate(-50%, -0.5775em);
+                }
+
+                &::after {
+                    transform: translate(-50%, 0.5775em);
+                }
+
+                @keyframes menuBeforeOpen {
+                    0% {
+                        transform: translate(-50%, -0.5775em);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, 0) rotate(45deg);
+                    }
+                }
+
+                @keyframes menuAfterOpen {
+                    0% {
+                        transform: translate(-50%, 0.5775em);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, 0) rotate(-45deg);
+                    }
+                }
+
+                @keyframes menuBeforeClose {
+                    0% {
+                        transform: translate(-50%, 0) rotate(45deg);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, -0.5775em);
+                    }
+                }
+
+                @keyframes menuAfterClose {
+                    0% {
+                        transform: translate(-50%, 0) rotate(-45deg);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, 0.5775em);
+                    }
+                }
+            }
+
+            &.open .line {
+                background-color: transparent;
+
+                &::before {
+                    animation: menuBeforeOpen 500ms forwards;
+                }
+
+                &::after {
+                    animation: menuAfterOpen 500ms forwards;
+                }
+            }
+
+            &.close .line {
+
+                &::before {
+                    animation: menuBeforeClose 500ms forwards;
+                }
+
+                &::after {
+                    animation: menuAfterClose 500ms forwards;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 36em) {
+        #menu-toggle {
+            width: 3.75em;
+            height: 3.75em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 2em;
+            right: 2em;
+            z-index: 2;
+            padding: 1em;
+            border-radius: 4em;
+            box-sizing: content-box;
+            background-color: $turquoise;
+            cursor: pointer;
+
+            .line {
+                display: block;
+                width: 3.125em;
+                height: 0.0625em;
+                position: relative;
+                margin: auto;
+                border: none;
+                background-color: $purple;
+                color: inherit;
+                transition: background-color 350ms;
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 0.0625em;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    background-color: $purple;
+                    transform-origin: 50% 0%;
+                }
+
+                &::before {
+                    transform: translate(-50%, -0.875em);
+                }
+
+                &::after {
+                    transform: translate(-50%, 0.875em);
+                }
+
+                @keyframes menuBeforeOpen {
+                    0% {
+                        transform: translate(-50%, -0.875em);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, 0) rotate(45deg);
+                    }
+                }
+
+                @keyframes menuAfterOpen {
+                    0% {
+                        transform: translate(-50%, 0.875em);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, 0) rotate(-45deg);
+                    }
+                }
+
+                @keyframes menuBeforeClose {
+                    0% {
+                        transform: translate(-50%, 0) rotate(45deg);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, -0.875em);
+                    }
+                }
+
+                @keyframes menuAfterClose {
+                    0% {
+                        transform: translate(-50%, 0) rotate(-45deg);
+                    }
+
+                    40% {
+                        transform: translate(-50%, 0);
+
+                    }
+
+                    60% {
+                        transform: translate(-50%, 0);
+                    }
+
+                    100% {
+                        transform: translate(-50%, 0.875em);
+                    }
+                }
+            }
+
+            &.open .line {
+                background-color: transparent;
+
+                &::before {
+                    animation: menuBeforeOpen 500ms forwards;
+                }
+
+                &::after {
+                    animation: menuAfterOpen 500ms forwards;
+                }
+            }
+
+            &.close .line {
+
+                &::before {
+                    animation: menuBeforeClose 500ms forwards;
+                }
+
+                &::after {
+                    animation: menuAfterClose 500ms forwards;
+                }
+            }
         }
     }
 }
@@ -354,11 +509,12 @@ header.header-page {
 header.header-index {
 
     .header__navbar {
-        height: 9.75em;
-        padding: 0 1em;
+        height: 5.89875em;
+        padding: 1em;
 
         @media only screen and (min-width: 36em) {
-            padding: 2em 5%;
+            height: 9.75em;
+            padding: 2em;
         }
     }
 
@@ -384,7 +540,7 @@ header.header-page {
     padding: 0 1em;
 
     @media only screen and (min-width: 36em) {
-        padding: 2em 5%;
+        padding: 2em;
     }
 }
 
@@ -401,7 +557,7 @@ h1.heading-index {
     background-image: url("./images/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    
+
     @media only screen and (max-width: 62em) {
         height: 10em !important;
         background-attachment: scroll;
