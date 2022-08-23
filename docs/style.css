@@ -745,8 +745,72 @@ main.main-index .section-2__grid #description .content#info p {
   }
 }
 
-main.main-index .value {
-  display: none;
+main.main-index .section-3__grid {
+  gap: 1em;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+}
+
+main.main-index .section-3__grid h3 {
+  text-align: center;
+}
+
+main.main-index .section-3__grid #uspora-info {
+  position: relative;
+}
+
+main.main-index .section-3__grid #uspora-info .content {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  padding: 2em;
+  background-color: #533ffc;
+}
+
+main.main-index .section-3__grid #uspora-info .content p {
+  color: #fff;
+}
+
+main.main-index .section-3__grid #uspora-info .content p.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+main.main-index .section-3__grid #uspora-info .content p.estimate mark {
+  color: #533ffc;
+  background-color: #98f9ff;
+  padding: 0.1em 0.2em;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 36em) {
+  main.main-index .section-3__grid #uspora-info .content {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 36em) {
+  main.main-index .section-3__grid {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 75) {
+  main.main-index .section-3__grid {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 36em) {
