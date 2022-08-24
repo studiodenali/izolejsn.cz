@@ -44,10 +44,59 @@ function house() {
 };
 
 function uspora() {
-    const input = document.getElementById("uspora-input");
-    const info = document.getElementById("uspora-info");
+    const input = document.getElementById("uspora__input");
 
-    info.querySelectorAll("#uspora-info .content").forEach((content) => {
+    document.querySelectorAll(".uspora__section-1 .value").forEach((value) => {
+        const dataset = value.dataset.value;
+
+        if (dataset == input.value) {
+            value.style.visibility = "visible";
+            value.style.opacity = "1";
+        } else if (dataset !== input.value) {
+            value.style.visibility = "hidden";
+            value.style.opacity = "0";
+        }
+    });
+
+    document.querySelectorAll(".uspora__section-2 .estimate").forEach((estimate) => {
+        const dataset = estimate.dataset.value;
+
+        if (dataset == input.value) {
+            estimate.style.visibility = "visible";
+            estimate.style.opacity = "1";
+        } else if (dataset !== input.value) {
+            estimate.style.visibility = "hidden";
+            estimate.style.opacity = "0";
+        }
+    });
+
+    input.oninput = function() {
+        document.querySelectorAll(".uspora__section-1 .value").forEach((value) => {
+            const dataset = value.dataset.value;
+    
+            if (dataset == input.value) {
+                value.style.visibility = "visible";
+                value.style.opacity = "1";
+            } else if (dataset !== input.value) {
+                value.style.visibility = "hidden";
+                value.style.opacity = "0";
+            }
+        });
+
+        document.querySelectorAll(".uspora__section-2 .estimate").forEach((estimate) => {
+            const dataset = estimate.dataset.value;
+    
+            if (dataset == input.value) {
+                estimate.style.visibility = "visible";
+                estimate.style.opacity = "1";
+            } else if (dataset !== input.value) {
+                estimate.style.visibility = "hidden";
+                estimate.style.opacity = "0";
+            }
+        });
+    }
+
+    /*info.querySelectorAll("#uspora-info .content").forEach((content) => {
         const dataset = content.dataset.value;
 
         if (dataset == input.value) {
@@ -71,7 +120,7 @@ function uspora() {
                 content.style.opacity = "0";
             }
         });
-    };
+    };*/
 };
 
 hero();
