@@ -881,6 +881,12 @@ main.main-index .uspora .uspora__section-2 .estimate p br {
   display: none;
 }
 
+@media only screen and (min-width: 62em) {
+  main.main-index .uspora .uspora__section-2 .estimate p br {
+    display: inline;
+  }
+}
+
 main.main-index .uspora .uspora__section-2 .estimate p mark {
   color: #533ffc;
   background-color: #98f9ff;

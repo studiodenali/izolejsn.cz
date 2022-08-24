@@ -890,6 +890,10 @@ main.main-index {
 
                     br {
                         display: none;
+
+                        @media only screen and (min-width: 62em) {
+                            display: inline;
+                        }
                     }
 
                     mark {
