@@ -768,71 +768,9 @@ main.main-index .section-2__grid #descriptions .description#info p {
 }
 
 main.main-index .uspora {
-  min-height: 30em;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
-  /*#uspora-info {
-            height: 20em;
-            position: relative;
-
-            .content {
-                width: 100%;
-                height: 20em;
-                display: grid;
-                grid-template-rows: 10em 10em;
-                grid-template-columns: 1fr;
-                position: absolute;
-                top: 0;
-                left: 0;
-                visibility: hidden;
-                opacity: 0;
-
-                .value,
-                .estimate {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 2em;
-                }
-
-                .value {
-                    background-color: $turquoise;
-
-                    p {
-                        color: $purple;
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                    }
-                }
-
-                .estimate {
-                    background-color: $purple;
-
-                    p {
-                        color: $turquoise;
-
-                        mark {
-                            color: $purple;
-                            background-color: $turquoise;
-                            padding: 0.1em 0.2em;
-                            font-weight: bold;
-                            white-space: nowrap;
-                        }
-                    }
-                }
-
-                @media only screen and (min-width: 36em) {
-                    height: 10em;
-                    grid-template-rows: auto;
-                    grid-template-columns: 1fr 1fr;
-                }
-            }
-
-            @media only screen and (min-width: 36em) {
-                height: 10em;
-            }
-        }*/
 }
 
 main.main-index .uspora h3 {
@@ -840,14 +778,35 @@ main.main-index .uspora h3 {
 }
 
 main.main-index .uspora .uspora__section-1 {
+  display: flex;
+  justify-self: center;
+  align-items: center;
   padding: 2em;
   background-color: #98f9ff;
 }
 
 main.main-index .uspora .uspora__section-1 h3 {
   color: #533ffc;
-  font-size: 2rem;
-  margin: 2em 0;
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 36em) {
+  main.main-index .uspora .uspora__section-1 h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  main.main-index .uspora .uspora__section-1 h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  main.main-index .uspora .uspora__section-1 h3 {
+    font-size: 2rem;
+  }
 }
 
 main.main-index .uspora .uspora__section-1 input#uspora__input {
@@ -856,7 +815,9 @@ main.main-index .uspora .uspora__section-1 input#uspora__input {
 
 main.main-index .uspora .uspora__section-1 #uspora__values {
   width: 100%;
-  height: 10em;
+  height: 2.125em;
+  min-height: 2.125em;
+  margin-top: 2em;
   position: relative;
 }
 
@@ -873,7 +834,19 @@ main.main-index .uspora .uspora__section-1 #uspora__values .value {
 
 main.main-index .uspora .uspora__section-1 #uspora__values .value p {
   color: #533ffc;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 75em) {
+  main.main-index .uspora .uspora__section-1 #uspora__values .value p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  main.main-index .uspora .uspora__section-1 #uspora__values {
+    height: 10em;
+  }
 }
 
 main.main-index .uspora .uspora__section-2 {
@@ -895,8 +868,12 @@ main.main-index .uspora .uspora__section-2 .estimate {
 
 main.main-index .uspora .uspora__section-2 .estimate p {
   color: #98f9ff;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 2;
+}
+
+main.main-index .uspora .uspora__section-2 .estimate p br {
+  display: none;
 }
 
 main.main-index .uspora .uspora__section-2 .estimate p mark {
@@ -908,9 +885,28 @@ main.main-index .uspora .uspora__section-2 .estimate p mark {
 }
 
 @media only screen and (min-width: 36em) {
+  main.main-index .uspora .uspora__section-2 .estimate p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  main.main-index .uspora .uspora__section-2 .estimate p {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 36em) {
   main.main-index .uspora {
+    height: 20em;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  main.main-index .uspora {
+    height: 30em;
   }
 }
 
