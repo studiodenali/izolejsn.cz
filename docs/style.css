@@ -850,7 +850,8 @@ main.main-index .uspora .uspora__section-1 #uspora__values .value p {
 
 @media only screen and (min-width: 75em) {
   main.main-index .uspora .uspora__section-1 #uspora__values {
-    height: 10em;
+    height: 2.875em;
+    min-height: 2.875em;
   }
 }
 
