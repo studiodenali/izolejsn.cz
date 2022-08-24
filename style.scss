@@ -802,11 +802,16 @@ main.main-index {
         }
 
         .uspora__section-1 {
+            width: 100%;
             display: flex;
             justify-self: center;
             align-items: center;
             padding: 2em;
             background-color: $turquoise;
+
+            .uspora__section-1__flex-container {
+                width: 100%;
+            }
 
             h3 {
                 color: $purple;
@@ -913,7 +918,7 @@ main.main-index {
         }
 
         @media only screen and (min-width: 62em) {
-            height: 30em;
+            height: 25em;
         }
     }
 

@@ -778,11 +778,16 @@ main.main-index .uspora h3 {
 }
 
 main.main-index .uspora .uspora__section-1 {
+  width: 100%;
   display: flex;
   justify-self: center;
   align-items: center;
   padding: 2em;
   background-color: #98f9ff;
+}
+
+main.main-index .uspora .uspora__section-1 .uspora__section-1__flex-container {
+  width: 100%;
 }
 
 main.main-index .uspora .uspora__section-1 h3 {
@@ -906,7 +911,7 @@ main.main-index .uspora .uspora__section-2 .estimate p mark {
 
 @media only screen and (min-width: 62em) {
   main.main-index .uspora {
-    height: 30em;
+    height: 25em;
   }
 }
 
