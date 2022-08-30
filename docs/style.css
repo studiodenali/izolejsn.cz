@@ -696,26 +696,37 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
-main.main-index .section-2__grid {
+main.main-index .house {
   gap: 2em;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 2.6875em auto;
   grid-template-columns: 1fr;
+  grid-template-areas: "house__svg" "house__h2" "house__descriptions";
+  margin: 0 1em;
 }
 
-main.main-index .section-2__grid #house #house__svg .house__part {
+main.main-index .house #house__svg {
+  grid-area: house__svg;
+}
+
+main.main-index .house #house__svg .house__part {
   cursor: pointer;
   transition: fill 100ms ease-in-out;
 }
 
-main.main-index .section-2__grid #descriptions {
+main.main-index .house h2 {
+  grid-area: house__h2;
+}
+
+main.main-index .house #descriptions {
   width: 100%;
   height: 100%;
   position: relative;
+  grid-area: house__descriptions;
   background-color: #533ffc;
 }
 
-main.main-index .section-2__grid #descriptions .description {
+main.main-index .house #descriptions .description {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -728,42 +739,45 @@ main.main-index .section-2__grid #descriptions .description {
   transition: opacity 100ms ease-in-out;
 }
 
-main.main-index .section-2__grid #descriptions .description h3 {
+main.main-index .house #descriptions .description h3 {
   font-size: 1.5rem;
   margin-bottom: 0.7em;
 }
 
-main.main-index .section-2__grid #descriptions .description h3 mark {
+main.main-index .house #descriptions .description h3 mark {
   color: #533ffc;
   background-color: #98f9ff;
   padding: 0.1em 0.3em;
 }
 
-main.main-index .section-2__grid #descriptions .description p {
+main.main-index .house #descriptions .description p {
   text-align: left;
 }
 
-main.main-index .section-2__grid #descriptions .description#info {
+main.main-index .house #descriptions .description#info {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-main.main-index .section-2__grid #descriptions .description#info p {
+main.main-index .house #descriptions .description#info p {
   font-size: 1.2rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 62em) {
-  main.main-index .section-2__grid #descriptions .description {
+  main.main-index .house #descriptions .description {
     padding: 2em;
   }
 }
 
 @media only screen and (min-width: 36em) {
-  main.main-index .section-2__grid {
-    grid-template-rows: auto;
+  main.main-index .house {
+    width: 90%;
+    grid-template-rows: 2.6875em auto;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "house__svg house__h2" "house__svg house__descriptions";
+    margin: auto;
   }
 }
 

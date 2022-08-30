@@ -39,7 +39,29 @@ function house() {
                 description.style.visibility = "visible";
                 description.style.opacity = "1";
             };
-        }
+
+            const ins = document.getElementById("ins");
+            switch (part.dataset.house) {
+                case "strecha":
+                    ins.innerHTML = "střechu";
+                    break;
+                case "podkrovi":
+                    ins.innerHTML = "podkroví";
+                    break;
+                case "strop":
+                    ins.innerHTML = "strop";
+                    break;
+                case "stena":
+                    ins.innerHTML = "stěnu";
+                    break;
+                case "podlaha":
+                    ins.innerHTML = "podlahu";
+                    break;
+                case "zaklady":
+                    ins.innerHTML = "základy";
+                    break;
+            };
+        };
     });
 };
 
@@ -94,33 +116,7 @@ function uspora() {
                 estimate.style.opacity = "0";
             }
         });
-    }
-
-    /*info.querySelectorAll("#uspora-info .content").forEach((content) => {
-        const dataset = content.dataset.value;
-
-        if (dataset == input.value) {
-            content.style.visibility = "visible";
-            content.style.opacity = "1";
-        } else if (dataset !== input.value) {
-            content.style.visibility = "hidden";
-            content.style.opacity = "0";
-        }
-    });
-
-    input.oninput = function () {
-        info.querySelectorAll("#uspora-info .content").forEach((content) => {
-            const dataset = content.dataset.value;
-
-            if (dataset == input.value) {
-                content.style.visibility = "visible";
-                content.style.opacity = "1";
-            } else if (dataset !== input.value) {
-                content.style.visibility = "hidden";
-                content.style.opacity = "0";
-            }
-        });
-    };*/
+    };
 };
 
 hero();

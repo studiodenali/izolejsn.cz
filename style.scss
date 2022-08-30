@@ -724,22 +724,33 @@ main.main-index {
         }
     }
 
-    // Section 2
-    .section-2__grid {
+    // House
+    .house {
         gap: 2em;
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto 2.6875em auto;
         grid-template-columns: 1fr;
+        grid-template-areas: "house__svg""house__h2""house__descriptions";
+        margin: 0 1em;
 
-        #house #house__svg .house__part {
-            cursor: pointer;
-            transition: fill 100ms ease-in-out;
+        #house__svg {
+            grid-area: house__svg;
+
+            .house__part {
+                cursor: pointer;
+                transition: fill 100ms ease-in-out;
+            }
+        }
+
+        h2 {
+            grid-area: house__h2;
         }
 
         #descriptions {
             width: 100%;
             height: 100%;
             position: relative;
+            grid-area: house__descriptions;
             background-color: $purple;
 
             .description {
@@ -787,8 +798,11 @@ main.main-index {
         }
 
         @media only screen and (min-width: 36em) {
-            grid-template-rows: auto;
+            width: 90%;
+            grid-template-rows: 2.6875em auto;
             grid-template-columns: 1fr 1fr;
+            grid-template-areas: "house__svg house__h2""house__svg house__descriptions";
+            margin: auto;
         }
     }
 
