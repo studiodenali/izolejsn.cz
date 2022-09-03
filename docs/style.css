@@ -998,9 +998,10 @@ main.main-index .uspora .uspora__section-2 .estimate p mark {
   color: #533ffc;
   font-size: 3rem;
   text-align: center;
+  padding: 0 0.4em;
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 62em) and (min-height: 36em) {
   .container-page .heading-page h1 {
     position: fixed;
     top: 50%;

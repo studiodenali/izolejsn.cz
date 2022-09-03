@@ -1000,8 +1000,9 @@ main.main-index {
             color: $purple;
             font-size: 3rem;
             text-align: center;
+            padding: 0 0.4em;
 
-            @media only screen and (min-width: 62em) {
+            @media only screen and (min-width: 62em) and (min-height: 36em) {
                 position: fixed;
                 top: 50%;
                 transform: translateY(-50%);
