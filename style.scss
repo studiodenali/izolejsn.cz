@@ -724,6 +724,31 @@ main.main-index {
         }
     }
 
+    // Kuny
+    #kuny {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+
+        #kuny__image img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 18 / 9;
+        }
+
+        #kuny__text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+        }
+
+        @media only screen and (min-width: 36em) {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
     // House
     #house {
         gap: 2em;

@@ -696,6 +696,32 @@ main.main-index section.section-1 .section-1__grid p {
   }
 }
 
+main.main-index #kuny {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+}
+
+main.main-index #kuny #kuny__image img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 18 / 9;
+}
+
+main.main-index #kuny #kuny__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+@media only screen and (min-width: 36em) {
+  main.main-index #kuny {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 main.main-index #house {
   gap: 2em;
   display: grid;
