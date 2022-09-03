@@ -82,55 +82,55 @@ function house() {
 
 function uspora() {
     const input = document.getElementById("uspora__input");
+    const value = document.getElementById("uspora__value");
+    const estimate = document.getElementById("uspora__estimate");
 
-    document.querySelectorAll(".uspora__section-1 .value").forEach((value) => {
-        const dataset = value.dataset.value;
+    switch (input.value) {
+        case "1":
+            value.innerHTML = "5000 Kč nebo méně";
+            estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2250 Kč</mark> měsíčně!";
+            break;
+        case "2":
+            value.innerHTML = "6000 Kč";
+            estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2700 Kč</mark> měsíčně!";
+            break;
+        case "3":
+            value.innerHTML = "7000 Kč";
+            estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3150 Kč</mark> měsíčně!";
+            break;
+        case "4":
+            value.innerHTML = "8000 Kč";
+            estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3600 Kč</mark> měsíčně!";
+            break;
+        case "5":
+            value.innerHTML = "9000 Kč nebo více";
+            estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit i více než <mark>4050 Kč</mark>měsíčně!";
+            break;
+    };
 
-        if (dataset == input.value) {
-            value.style.visibility = "visible";
-            value.style.opacity = "1";
-        } else if (dataset !== input.value) {
-            value.style.visibility = "hidden";
-            value.style.opacity = "0";
-        }
-    });
-
-    document.querySelectorAll(".uspora__section-2 .estimate").forEach((estimate) => {
-        const dataset = estimate.dataset.value;
-
-        if (dataset == input.value) {
-            estimate.style.visibility = "visible";
-            estimate.style.opacity = "1";
-        } else if (dataset !== input.value) {
-            estimate.style.visibility = "hidden";
-            estimate.style.opacity = "0";
-        }
-    });
-
-    input.oninput = function() {
-        document.querySelectorAll(".uspora__section-1 .value").forEach((value) => {
-            const dataset = value.dataset.value;
-    
-            if (dataset == input.value) {
-                value.style.visibility = "visible";
-                value.style.opacity = "1";
-            } else if (dataset !== input.value) {
-                value.style.visibility = "hidden";
-                value.style.opacity = "0";
-            }
-        });
-
-        document.querySelectorAll(".uspora__section-2 .estimate").forEach((estimate) => {
-            const dataset = estimate.dataset.value;
-    
-            if (dataset == input.value) {
-                estimate.style.visibility = "visible";
-                estimate.style.opacity = "1";
-            } else if (dataset !== input.value) {
-                estimate.style.visibility = "hidden";
-                estimate.style.opacity = "0";
-            }
-        });
+    input.oninput = function () {
+        switch (input.value) {
+            case "1":
+                value.innerHTML = "5000 Kč nebo méně";
+                estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2250 Kč</mark> měsíčně!";
+                break;
+            case "2":
+                value.innerHTML = "6000 Kč";
+                estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2700 Kč</mark> měsíčně!";
+                break;
+            case "3":
+                value.innerHTML = "7000 Kč";
+                estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3150 Kč</mark> měsíčně!";
+                break;
+            case "4":
+                value.innerHTML = "8000 Kč";
+                estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3600 Kč</mark> měsíčně!";
+                break;
+            case "5":
+                value.innerHTML = "9000 Kč nebo více";
+                estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit i více než <mark>4050 Kč</mark>měsíčně!";
+                break;
+        };
     };
 };
 

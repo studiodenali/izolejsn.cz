@@ -879,77 +879,46 @@ main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input:foc
   background-color: #361fff;
 }
 
-main.main-index .uspora .uspora__section-1 #uspora__values {
+main.main-index .uspora .uspora__section-1 #uspora__value {
   width: 100%;
-  height: 2.125em;
-  min-height: 2.125em;
-  margin-top: 2em;
-  position: relative;
-}
-
-main.main-index .uspora .uspora__section-1 #uspora__values .value {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-main.main-index .uspora .uspora__section-1 #uspora__values .value p {
   color: #533ffc;
   font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 75em) {
-  main.main-index .uspora .uspora__section-1 #uspora__values .value p {
+  main.main-index .uspora .uspora__section-1 #uspora__value {
     font-size: 2rem;
   }
 }
 
-@media only screen and (min-width: 75em) {
-  main.main-index .uspora .uspora__section-1 #uspora__values {
-    height: 2.875em;
-    min-height: 2.875em;
-  }
-}
-
 main.main-index .uspora .uspora__section-2 {
-  position: relative;
-  background-color: #533ffc;
-}
-
-main.main-index .uspora .uspora__section-2 .estimate {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   padding: 2em;
+  background-color: #533ffc;
 }
 
-main.main-index .uspora .uspora__section-2 .estimate p {
+main.main-index .uspora .uspora__section-2 p#uspora__estimate {
   color: #98f9ff;
   font-size: 1.5rem;
   line-height: 2;
 }
 
-main.main-index .uspora .uspora__section-2 .estimate p br {
+main.main-index .uspora .uspora__section-2 p#uspora__estimate br {
   display: none;
 }
 
 @media only screen and (min-width: 62em) {
-  main.main-index .uspora .uspora__section-2 .estimate p br {
+  main.main-index .uspora .uspora__section-2 p#uspora__estimate br {
     display: inline;
   }
 }
 
-main.main-index .uspora .uspora__section-2 .estimate p mark {
+main.main-index .uspora .uspora__section-2 p#uspora__estimate mark {
   color: #533ffc;
   background-color: #98f9ff;
   padding: 0.1em 0.2em;
@@ -958,13 +927,13 @@ main.main-index .uspora .uspora__section-2 .estimate p mark {
 }
 
 @media only screen and (min-width: 36em) {
-  main.main-index .uspora .uspora__section-2 .estimate p {
+  main.main-index .uspora .uspora__section-2 p#uspora__estimate {
     font-size: 1.4rem;
   }
 }
 
 @media only screen and (min-width: 75em) {
-  main.main-index .uspora .uspora__section-2 .estimate p {
+  main.main-index .uspora .uspora__section-2 p#uspora__estimate {
     font-size: 1.7rem;
   }
 }
