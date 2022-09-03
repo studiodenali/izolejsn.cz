@@ -558,12 +558,13 @@ header.header-index .header__heading h1 {
 }
 
 header.header-page {
-  height: 9.75em;
-  padding: 0 1em;
+  height: 5.89875em;
+  padding: 1em;
 }
 
 @media only screen and (min-width: 36em) {
   header.header-page {
+    height: 9.75em;
     padding: 2em;
   }
 }
@@ -988,18 +989,23 @@ main.main-index .uspora .uspora__section-2 .estimate p mark {
 }
 
 .container-page .heading-page {
-  padding: 4em 0;
+  padding: 6em 0;
   background-color: #98f9ff;
   grid-area: page__heading;
 }
 
 .container-page .heading-page h1 {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
   color: #533ffc;
   font-size: 3rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 62em) {
+  .container-page .heading-page h1 {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 @media only screen and (min-width: 62em) {

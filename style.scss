@@ -592,10 +592,11 @@ header.header-index {
 }
 
 header.header-page {
-    height: 9.75em;
-    padding: 0 1em;
+    height: 5.89875em;
+    padding: 1em;
 
     @media only screen and (min-width: 36em) {
+        height: 9.75em;
         padding: 2em;
     }
 }
@@ -991,17 +992,20 @@ main.main-index {
     grid-template-areas: "page__heading""page__main""page__footer";
 
     .heading-page {
-        padding: 4em 0;
+        padding: 6em 0;
         background-color: $turquoise;
         grid-area: page__heading;
 
         h1 {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
             color: $purple;
             font-size: 3rem;
             text-align: center;
+
+            @media only screen and (min-width: 62em) {
+                position: fixed;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
 
         @media only screen and (min-width: 62em) {
