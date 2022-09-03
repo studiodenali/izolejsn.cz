@@ -845,8 +845,52 @@ main.main-index {
                 }
             }
 
-            input#uspora__input {
+            input[type="range"]#uspora__input {
                 width: 100%;
+                appearance: none;
+                background: transparent;
+                cursor: pointer;
+
+                &::-webkit-slider-runnable-track {
+                    height: 0.5em;
+                    background-color: #523ffc99;
+                    border-radius: 1em;
+                }
+
+                &::-moz-range-track {
+                    height: 0.5em;
+                    background-color: #523ffc99;
+                    border-radius: 1em;
+                }
+
+                &::-webkit-slider-thumb {
+                    appearance: none;
+                    width: 1.5em;
+                    height: 1.5em;
+                    margin-top: -0.5em;
+                    background-color: $purple;
+                    border-radius: 1.5em;
+                }
+
+                &::-moz-range-thumb {
+                    border: none;
+                    border-radius: 1.5em;
+                    width: 1.5em;
+                    height: 1.5em;
+                    background-color: $purple;
+                }
+
+                &:focus {
+                    outline: none;
+
+                    &::-webkit-slider-thumb {
+                        background-color: #361fff;
+                    }
+
+                    &::-moz-range-thumb {
+                        background-color: #361fff;
+                    }
+                }
             }
 
             #uspora__values {

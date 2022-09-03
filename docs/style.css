@@ -828,8 +828,52 @@ main.main-index .uspora .uspora__section-1 h3 {
   }
 }
 
-main.main-index .uspora .uspora__section-1 input#uspora__input {
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input {
   width: 100%;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input::-webkit-slider-runnable-track {
+  height: 0.5em;
+  background-color: #523ffc99;
+  border-radius: 1em;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input::-moz-range-track {
+  height: 0.5em;
+  background-color: #523ffc99;
+  border-radius: 1em;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: -0.5em;
+  background-color: #533ffc;
+  border-radius: 1.5em;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input::-moz-range-thumb {
+  border: none;
+  border-radius: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #533ffc;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input:focus {
+  outline: none;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input:focus::-webkit-slider-thumb {
+  background-color: #361fff;
+}
+
+main.main-index .uspora .uspora__section-1 input[type="range"]#uspora__input:focus::-moz-range-thumb {
+  background-color: #361fff;
 }
 
 main.main-index .uspora .uspora__section-1 #uspora__values {
