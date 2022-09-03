@@ -1109,6 +1109,7 @@ main.kontakt section.company-details {
 
 main.kontakt section.profile h3,
 main.kontakt section.company-details h3 {
+  color: #533ffc;
   margin-bottom: 0.5em;
 }
 
@@ -1121,9 +1122,16 @@ main.kontakt section.form {
   grid-area: contact__form;
 }
 
+main.kontakt section.form h2 {
+  color: #533ffc;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 main.kontakt section.form #contact-form {
   width: 100%;
-  gap: 1em;
+  gap: 2em;
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-columns: 1fr;
@@ -1138,6 +1146,7 @@ main.kontakt section.form #contact-form input,
 main.kontakt section.form #contact-form textarea {
   width: 100%;
   font-family: "Michroma", sans-serif;
+  font-size: 1rem;
   border-color: rgba(0, 0, 0, 0.3);
   transition: border-color 100ms ease-in-out;
 }
