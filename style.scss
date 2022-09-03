@@ -1031,7 +1031,6 @@ main.main-index {
         grid-template-rows: auto auto;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "page__heading page__main""page__heading page__footer";
-        padding-right: 4em;
     }
 }
 
@@ -1155,12 +1154,13 @@ main.kontakt {
                 width: 100%;
                 font-family: "Michroma", sans-serif;
                 font-size: 1rem;
-                border-color: rgba(0, 0, 0, 0.3);
+                color: #0000004d;
+                border-color: #0000004d;
                 transition: border-color 100ms ease-in-out;
 
                 &:focus {
                     outline: none;
-                    border-color: rgba(0, 0, 0, 0.6);
+                    border-color: #00000099;
                 }
             }
 
@@ -1194,8 +1194,30 @@ main.kontakt {
                 grid-area: message;
             }
 
-            button {
+            #contact-form__btn {
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
                 grid-area: button;
+            }
+
+            button {
+                all: unset;
+                appearance: none;
+                padding: 0.5em 1em;
+                background-color: $purple;
+                color: $turquoise;
+                font-size: 1.2rem;
+                font-weight: bolder;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+
+                &:hover,
+                &:focus {
+                    background-color: $turquoise;
+                    color: $purple;
+                }
             }
 
             @media only screen and (min-width: 36em) {

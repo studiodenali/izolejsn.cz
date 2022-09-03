@@ -1035,7 +1035,6 @@ main.main-index .uspora .uspora__section-2 .estimate p mark {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "page__heading page__main" "page__heading page__footer";
-    padding-right: 4em;
   }
 }
 
@@ -1147,14 +1146,15 @@ main.kontakt section.form #contact-form textarea {
   width: 100%;
   font-family: "Michroma", sans-serif;
   font-size: 1rem;
-  border-color: rgba(0, 0, 0, 0.3);
+  color: #0000004d;
+  border-color: #0000004d;
   transition: border-color 100ms ease-in-out;
 }
 
 main.kontakt section.form #contact-form input:focus,
 main.kontakt section.form #contact-form textarea:focus {
   outline: none;
-  border-color: rgba(0, 0, 0, 0.6);
+  border-color: #00000099;
 }
 
 main.kontakt section.form #contact-form input {
@@ -1187,8 +1187,29 @@ main.kontakt section.form #contact-form textarea#message {
   grid-area: message;
 }
 
-main.kontakt section.form #contact-form button {
+main.kontakt section.form #contact-form #contact-form__btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
   grid-area: button;
+}
+
+main.kontakt section.form #contact-form button {
+  all: unset;
+  appearance: none;
+  padding: 0.5em 1em;
+  background-color: #533ffc;
+  color: #98f9ff;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+main.kontakt section.form #contact-form button:hover, main.kontakt section.form #contact-form button:focus {
+  background-color: #98f9ff;
+  color: #533ffc;
 }
 
 @media only screen and (min-width: 36em) {
