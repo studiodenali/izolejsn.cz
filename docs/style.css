@@ -557,6 +557,12 @@ header.header-index .header__heading h1 {
   }
 }
 
+@media only screen and (min-width: 100em) {
+  header.header-index .header__heading {
+    height: 30em;
+  }
+}
+
 header.header-page {
   height: 5.89875em;
   padding: 1em;
