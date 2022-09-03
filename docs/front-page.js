@@ -35,7 +35,7 @@ function house() {
                 case "strecha":
                     ins.innerHTML = "střechu";
                     description.innerHTML = `
-                        <p>Tvrdá střešní pěna</p>
+                        <p><a href="./materialy/purex_ng-0440.html" class="link">Tvrdá střešní pěna</a></p>
                         <p>Od 90 Kč/m<sup>2</sup> bez DPH</p>
                         <p>Je určená na exteriér střechy</p>
                     `;
@@ -43,35 +43,35 @@ function house() {
                 case "podkrovi":
                     ins.innerHTML = "podkroví";
                     description.innerHTML = `
-                        <p>Měkká pěna</p>
+                        <p><a href="./materialy/purex_ng-0808nf.html" class="link">Měkká pěna</a></p>
                         <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>
                     `;
                     break;
                 case "strop":
                     ins.innerHTML = "strop";
                     description.innerHTML = `
-                        <p>Měkká pěna</p>
+                        <p><a href="./materialy/purex_ng-0808nf.html" class="link">Měkká pěna</a></p>
                         <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>
                     `;
                     break;
                 case "vnejsi_steny":
                     ins.innerHTML = "vnější stěny";
                     description.innerHTML = `
-                        <p>Tvrdá pěna</p>
+                        <p><a href="./materialy/purex_ng-0428.html" class="link">Tvrdá pěna</a></p>
                         <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>
                     `;
                     break;
                 case "podlaha":
                     ins.innerHTML = "podlahu";
                     description.innerHTML = `
-                        <p>Měkká pěna</p>
+                        <p><a href="./materialy/purex_ng-0808nf.html" class="link">Měkká pěna</a></p>
                         <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>
                     `;
                     break;
                 case "zaklady":
                     ins.innerHTML = "základy";
                     description.innerHTML = `
-                        <p>Tvrdá pěna</p>
+                        <p><a href="./materialy/purex_ng-0428.html" class="link">Tvrdá pěna</a></p>
                         <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>
                     `;
                     break;
