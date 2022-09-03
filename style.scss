@@ -237,12 +237,7 @@ header.header-page {
         align-items: center;
 
         img {
-            width: 13em;
             display: block;
-
-            @media only screen and (min-width: 36em) {
-                width: 17em;
-            }
         }
 
         @media only screen and (min-width: 36em) {
@@ -753,7 +748,6 @@ main.main-index {
         grid-template-columns: 1fr;
 
         #kuny__image img {
-            width: 100%;
             object-fit: cover;
             aspect-ratio: 18 / 9;
         }
