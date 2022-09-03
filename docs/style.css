@@ -632,6 +632,7 @@ main.main-index section {
 
 main.main-index section h2 {
   color: #533ffc;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -649,6 +650,12 @@ main.main-index section p {
 @media only screen and (min-width: 62em) {
   main.main-index section {
     margin: 4em 0;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  main.main-index section {
+    margin: 6em 0;
   }
 }
 
@@ -741,6 +748,14 @@ main.main-index #house #house__content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+main.main-index #house #house__content p {
+  margin-bottom: 0.5em;
+}
+
+main.main-index #house #house__content p:last-child {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 36em) {
