@@ -15,16 +15,9 @@ function house() {
     const house = document.getElementById("house__svg");
 
     house.querySelectorAll(".house__part").forEach((part) => {
-        const description = document.getElementById(part.dataset.house);
-
         function reset() {
             house.querySelectorAll(".house__part").forEach((part) => {
                 part.style.fill = "#543ffc";
-            });
-
-            document.querySelectorAll("#descriptions .description").forEach((description) => {
-                description.style.visibility = "hidden";
-                description.style.opacity = "0";
             });
         };
 
@@ -35,30 +28,52 @@ function house() {
                 element.style.fill = "#98f9ff";
             });
 
-            if (description) {
-                description.style.visibility = "visible";
-                description.style.opacity = "1";
-            };
+            const ins = document.getElementById("house__ins");
+            const description = document.getElementById("house__description");
 
-            const ins = document.getElementById("ins");
             switch (part.dataset.house) {
                 case "strecha":
                     ins.innerHTML = "střechu";
+                    description.innerHTML = `
+                        <p>Tvrdá střešní pěna</p>
+                        <p>Od 90 Kč/m<sup>2</sup> bez DPH</p>
+                        <p>Je určená na exteriér střechy</p>
+                    `;
                     break;
                 case "podkrovi":
                     ins.innerHTML = "podkroví";
+                    description.innerHTML = `
+                        <p>Měkká pěna</p>
+                        <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>
+                    `;
                     break;
                 case "strop":
                     ins.innerHTML = "strop";
+                    description.innerHTML = `
+                        <p>Měkká pěna</p>
+                        <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>
+                    `;
                     break;
-                case "stena":
-                    ins.innerHTML = "stěnu";
+                case "vnejsi_steny":
+                    ins.innerHTML = "vnější stěny";
+                    description.innerHTML = `
+                        <p>Tvrdá pěna</p>
+                        <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>
+                    `;
                     break;
                 case "podlaha":
                     ins.innerHTML = "podlahu";
+                    description.innerHTML = `
+                        <p>Měkká pěna</p>
+                        <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>
+                    `;
                     break;
                 case "zaklady":
                     ins.innerHTML = "základy";
+                    description.innerHTML = `
+                        <p>Tvrdá pěna</p>
+                        <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>
+                    `;
                     break;
             };
         };
