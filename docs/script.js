@@ -3,6 +3,9 @@ document.querySelectorAll(".on-page-load").forEach((element) => {
     element.classList.remove("on-page-load");
 });
 
+// Copyright year
+document.getElementById("copyright__year").innerHTML = new Date().getFullYear();
+
 // Menu
 let menuOpen = false;
 const btn = document.getElementById("menu-toggle");
