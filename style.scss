@@ -666,7 +666,7 @@ main.main-index {
 
         h2 {
             color: $purple;
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 1em;
         }
@@ -684,7 +684,7 @@ main.main-index {
         }
 
         @media only screen and (min-width: 75em) {
-            margin: 6em 0;
+            margin: 8em 0;
         }
     }
 
@@ -1102,54 +1102,106 @@ main.o-nas {
 
 // Kontakt
 main.kontakt {
-    #contact-form {
-        display: grid;
-        grid-template-rows: auto auto auto auto auto auto;
-        grid-template-columns: 1fr;
-        grid-template-areas: "fieldset-name""fieldset-email""fieldset-tel""fieldset-subject""fieldset-message""button";
+    gap: 2em;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contact__profile""contact__company-details""contact__form";
 
-        * {
-            display: block;
+    section.profile {
+        grid-area: contact__profile;
+    }
+
+    section.company-details {
+        grid-area: contact__company-details;
+    }
+
+    section.profile,
+    section.company-details {
+        h3 {
+            margin-bottom: 0.5em;
         }
 
-        fieldset {
-            border: none;
+        p {
+            margin: 0.5em 0;
+        }
+    }
+
+    section.form {
+        grid-area: contact__form;
+
+        #contact-form {
+            width: 100%;
+            gap: 1em;
+            display: grid;
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-columns: 1fr;
+            grid-template-areas: "name""email""tel""subject""message""button";
+
+            * {
+                display: block;
+            }
+
 
             input,
             textarea {
                 width: 100%;
+                font-family: "Michroma", sans-serif;
+                border-color: rgba(0, 0, 0, 0.3);
+                transition: border-color 100ms ease-in-out;
+
+                &:focus {
+                    outline: none;
+                    border-color: rgba(0, 0, 0, 0.6);
+                }
             }
 
-            &#fieldset-name {
-                grid-area: fieldset-name;
+            input {
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+
+                &#name {
+                    grid-area: name;
+                }
+    
+                &#email {
+                    grid-area: email;
+                }
+    
+                &#tel {
+                    grid-area: tel;
+                }
+    
+                &#subject {
+                    grid-area: subject;
+                }
             }
 
-            &#fieldset-email {
-                grid-area: fieldset-email;
+            textarea#message {
+                border-width: 1px;
+                border-style: solid;
+                grid-area: message;
             }
 
-            &#fieldset-tel {
-                grid-area: fieldset-tel;
+            button {
+                grid-area: button;
             }
 
-            &#fieldset-subject {
-                grid-area: fieldset-subject;
-            }
-
-            &#fieldset-message {
-                grid-area: fieldset-message;
+            @media only screen and (min-width: 36em) {
+                grid-template-rows: auto auto auto auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "name email""tel subject""message message""button button";
             }
         }
+    }
 
-        button {
-            grid-area: button;
-        }
-
-        @media only screen and (min-width: 36em) {
-            grid-template-rows: auto auto auto auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: "fieldset-name fieldset-email""fieldset-tel fieldset-subject""fieldset-message fieldset-message""button button";
-        }
+    @media only screen and (min-width: 36em) {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contact__profile contact__company-details""contact__form contact__form";
     }
 }
 

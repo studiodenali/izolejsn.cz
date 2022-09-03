@@ -25,45 +25,47 @@
     <div id="overlay">
         <div id="overlay__white"></div>
     </div>
-    <header class="header-page">
-        <div id="logo">
-            <a href="./index.html">
-                <img src="./images/logo.svg">
-            </a>
+    <div id="mask">
+        <header class="header-page">
+            <div id="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.svg">
+                </a>
+            </div>
+            <div id="menu-toggle">
+                <div class="line on-page-load"></div>
+            </div>
+        </header>
+        <div class="container-page">
+            <div class="heading-page">
+                <h1>kontakt</h1>
+            </div>
+            <main class="kontakt">
+                <section class="profile">
+                    <h3>Petr Macháček</h3>
+                    <p>Jednatel společnosti</p>
+                    <p><a href="tel:+420773744401">+420 773 744 401</a></p>
+                    <p><a href="strikame@izolejsn.cz">strikame@izolejsn.cz</a></p>
+                </section>
+                <section class="company-details">
+                    <h3>BaryFerko s.r.o.</h3>
+                    <p>IČO: 14015650</p>
+                    <p>DIČ: CZ14015650</p>
+                    <p>Jsme plátci DPH.</p>
+                </section>
+                <section class="form">
+                    <h2>Jdeme stříkat?</h2>
+                    <form method="POST" action="./send-mail.php" id="contact-form">
+                        <input type="text" name="name" id="name" placeholder="Jméno a příjmení" required>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        <input type="tel" name="tel" id="tel" placeholder="Telefonní číslo">
+                        <input type="text" name="subject" id="subject" placeholder="Předmět">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Zpráva"></textarea>
+                        <button type="submit">Odeslat</button>
+                    </form>
+                </section>
+            </main>
         </div>
-        <div id="menu-toggle">
-            <div class="line on-page-load"></div>
-        </div>
-    </header>
-    <div class="container-page">
-        <div class="heading-page">
-            <h1>kontakt</h1>
-        </div>
-        <main class="kontakt">
-            <form method="POST" action="./send-mail.php" id="contact-form">
-                <fieldset id="fieldset-name">
-                    <label for="name">Jméno a příjmení</label>
-                    <input type="text" name="name" id="name" required>
-                </fieldset>
-                <fieldset id="fieldset-email">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required>
-                </fieldset>
-                <fieldset id="fieldset-tel">
-                    <label for="tel">Telefonní číslo</label>
-                    <input type="tel" name="tel" id="tel">
-                </fieldset>
-                <fieldset id="fieldset-subject">
-                    <label for="subject">Předmět</label>
-                    <input type="text" name="subject" id="subject" required>
-                </fieldset>
-                <fieldset id="fieldset-message">
-                    <label for="message">Zpráva</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                </fieldset>
-                <button type="submit">Odeslat</button>
-            </form>
-        </main>
     </div>
     <script src="./script.js"></script>
 </body>

@@ -632,7 +632,7 @@ main.main-index section {
 
 main.main-index section h2 {
   color: #533ffc;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -655,7 +655,7 @@ main.main-index section p {
 
 @media only screen and (min-width: 75em) {
   main.main-index section {
-    margin: 6em 0;
+    margin: 8em 0;
   }
 }
 
@@ -1091,55 +1091,110 @@ main.o-nas img {
   width: 100%;
 }
 
-main.kontakt #contact-form {
+main.kontakt {
+  gap: 2em;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "contact__profile" "contact__company-details" "contact__form";
+}
+
+main.kontakt section.profile {
+  grid-area: contact__profile;
+}
+
+main.kontakt section.company-details {
+  grid-area: contact__company-details;
+}
+
+main.kontakt section.profile h3,
+main.kontakt section.company-details h3 {
+  margin-bottom: 0.5em;
+}
+
+main.kontakt section.profile p,
+main.kontakt section.company-details p {
+  margin: 0.5em 0;
+}
+
+main.kontakt section.form {
+  grid-area: contact__form;
+}
+
+main.kontakt section.form #contact-form {
+  width: 100%;
+  gap: 1em;
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "fieldset-name" "fieldset-email" "fieldset-tel" "fieldset-subject" "fieldset-message" "button";
+  grid-template-areas: "name" "email" "tel" "subject" "message" "button";
 }
 
-main.kontakt #contact-form * {
+main.kontakt section.form #contact-form * {
   display: block;
 }
 
-main.kontakt #contact-form fieldset {
-  border: none;
-}
-
-main.kontakt #contact-form fieldset input,
-main.kontakt #contact-form fieldset textarea {
+main.kontakt section.form #contact-form input,
+main.kontakt section.form #contact-form textarea {
   width: 100%;
+  font-family: "Michroma", sans-serif;
+  border-color: rgba(0, 0, 0, 0.3);
+  transition: border-color 100ms ease-in-out;
 }
 
-main.kontakt #contact-form fieldset#fieldset-name {
-  grid-area: fieldset-name;
+main.kontakt section.form #contact-form input:focus,
+main.kontakt section.form #contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.6);
 }
 
-main.kontakt #contact-form fieldset#fieldset-email {
-  grid-area: fieldset-email;
+main.kontakt section.form #contact-form input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
-main.kontakt #contact-form fieldset#fieldset-tel {
-  grid-area: fieldset-tel;
+main.kontakt section.form #contact-form input#name {
+  grid-area: name;
 }
 
-main.kontakt #contact-form fieldset#fieldset-subject {
-  grid-area: fieldset-subject;
+main.kontakt section.form #contact-form input#email {
+  grid-area: email;
 }
 
-main.kontakt #contact-form fieldset#fieldset-message {
-  grid-area: fieldset-message;
+main.kontakt section.form #contact-form input#tel {
+  grid-area: tel;
 }
 
-main.kontakt #contact-form button {
+main.kontakt section.form #contact-form input#subject {
+  grid-area: subject;
+}
+
+main.kontakt section.form #contact-form textarea#message {
+  border-width: 1px;
+  border-style: solid;
+  grid-area: message;
+}
+
+main.kontakt section.form #contact-form button {
   grid-area: button;
 }
 
 @media only screen and (min-width: 36em) {
-  main.kontakt #contact-form {
+  main.kontakt section.form #contact-form {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "fieldset-name fieldset-email" "fieldset-tel fieldset-subject" "fieldset-message fieldset-message" "button button";
+    grid-template-areas: "name email" "tel subject" "message message" "button button";
+  }
+}
+
+@media only screen and (min-width: 36em) {
+  main.kontakt {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "contact__profile contact__company-details" "contact__form contact__form";
   }
 }
 
