@@ -1137,18 +1137,7 @@ main.typy-pen {
             text-decoration: none;
 
             h2 {
-                mark {
-                    color: $purple;
-                    background-color: $turquoise;
-                }
-            }
-
-            &:hover,
-            &:focus {
-                h2 mark {
-                    color: $turquoise;
-                    background-color: $purple;
-                }
+                margin-bottom: 0.5em;
             }
         }
 
