@@ -819,13 +819,15 @@ main.main-index {
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
-        padding: 2em 0;
+        padding-top: 2em;
 
         #vyhody__image img {
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+
             @media only screen and (min-width: 36em) and (max-width: 62em) {
                 aspect-ratio: 21 / 9;
-                object-fit: cover;
-                object-position: bottom;
             }
         }
 
@@ -865,7 +867,7 @@ main.main-index {
         }
 
         @media only screen and (min-width: 62em) {
-            padding: 3em 0;
+            padding-top: 3em;
         }
 
         @media only screen and (min-width: 62em) {
