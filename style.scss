@@ -750,6 +750,10 @@ main.main-index {
         #kuny__image img {
             object-fit: cover;
             aspect-ratio: 18 / 9;
+
+            @media only screen and (min-width: 36em) and (max-width: 62em) {
+                aspect-ratio: 21 / 9;
+            }
         }
 
         #kuny__text {
@@ -759,7 +763,7 @@ main.main-index {
             padding: 2em;
         }
 
-        @media only screen and (min-width: 36em) {
+        @media only screen and (min-width: 62em) {
             grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr;
         }
