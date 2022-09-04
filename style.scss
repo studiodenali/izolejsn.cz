@@ -620,9 +620,16 @@ h1.heading-index {
 }
 
 // Hero
+.nowebp #hero {
+    background-image: url("./images/hero.jpg");
+}
+
+.webp #hero {
+    background-image: url("./images/hero.webp");
+}
+
 #hero {
     padding-right: calc(-1 * (100vw - 100%));
-    background-image: url("./images/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
 
