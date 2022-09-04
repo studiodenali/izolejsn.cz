@@ -670,38 +670,29 @@ h1.heading-index {
 
 // Front-page main
 main.main-index {
-    margin: 2em 0;
 
     // Sections
     section {
-        margin: 2em 0;
-
         h2 {
             color: $purple;
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: center;
             margin-bottom: 1em;
+
+            @media only screen and (min-width: 75em) {
+                font-size: 2.5rem;
+            }
         }
 
         p {
             text-align: center;
         }
-
-        @media only screen and (min-width: 36em) {
-            margin: 3em 0;
-        }
-
-        @media only screen and (min-width: 62em) {
-            margin: 4em 0;
-        }
-
-        @media only screen and (min-width: 75em) {
-            margin: 8em 0;
-        }
     }
 
     // Section 1
     section.section-1 {
+        padding: 2em 1em;
+
         .section-1__grid {
             gap: 2em;
             display: grid;
@@ -739,6 +730,12 @@ main.main-index {
                 width: 80%;
             }
         }
+
+        @media only screen and (min-width: 36em) {
+            width: 90%;
+            margin: auto;
+            padding: 3em 0;
+        }
     }
 
     // Kuny
@@ -775,7 +772,7 @@ main.main-index {
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
-        margin: 0 1em;
+        padding: 2em 1em;
 
         #house__svg {
             .house__part {
@@ -805,165 +802,274 @@ main.main-index {
             grid-template-rows: auto;
             grid-template-columns: 1fr 1fr;
             margin: auto;
+            padding: 3em 0;
         }
     }
 
-    .uspora {
+    // Výhody
+    section#vyhody {
+        row-gap: 2em;
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto auto;
         grid-template-columns: 1fr;
+        padding: 2em 0;
 
-        h3 {
-            text-align: center;
+        #vyhody__image img {
+            @media only screen and (min-width: 36em) and (max-width: 62em) {
+                aspect-ratio: 21 / 9;
+                object-fit: cover;
+                object-position: bottom;
+            }
         }
 
-        .uspora__section-1 {
-            width: 100%;
-            display: flex;
-            justify-self: center;
-            align-items: center;
-            padding: 2em;
-            background-color: $turquoise;
+        #vyhody__text {
+            padding: 0 1em;
 
-            .uspora__section-1__flex-container {
-                width: 100%;
+            ul {
+                padding-left: 2.5em;
+
+                li {
+                    font-size: 1.2rem;
+                    margin: 0.5em 0;
+                }
             }
 
+            @media only screen and (min-width: 36em) and (max-width: 62em) {
+                width: 80%;
+                margin: auto;
+                padding: 0;
+            }
+
+            @media only screen and (min-width: 62em) {
+                padding: 0 2em;
+
+                h2 {
+                    text-align: left;
+                }
+            }
+
+            @media only screen and (min-width: 75em) {
+                padding: 0 2em 0 3em;
+            }
+
+            @media only screen and (min-width: 100em) {
+                padding: 0 2em 0 4em;
+            }
+        }
+
+        @media only screen and (min-width: 62em) {
+            padding: 3em 0;
+        }
+
+        @media only screen and (min-width: 62em) {
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    section#uspory {
+        padding: 2em 0;
+
+        .uspora {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+    
             h3 {
-                color: $purple;
-                font-size: 1.7rem;
-                margin-bottom: 1em;
-
-                @media only screen and (min-width: 36em) {
-                    font-size: 1.5rem;
-                }
-
-                @media only screen and (min-width: 62em) {
-                    font-size: 1.8rem;
-                }
-
-                @media only screen and (min-width: 75em) {
-                    font-size: 2rem;
-                }
+                text-align: center;
             }
-
-            input[type="range"]#uspora__input {
+    
+            .uspora__section-1 {
                 width: 100%;
-                appearance: none;
-                background: transparent;
-                cursor: pointer;
-
-                &::-webkit-slider-runnable-track {
-                    height: 0.5em;
-                    background-color: #523ffc99;
-                    border-radius: 1em;
+                display: flex;
+                justify-self: center;
+                align-items: center;
+                padding: 2em;
+                background-color: $turquoise;
+    
+                .uspora__section-1__flex-container {
+                    width: 100%;
                 }
-
-                &::-moz-range-track {
-                    height: 0.5em;
-                    background-color: #523ffc99;
-                    border-radius: 1em;
+    
+                h3 {
+                    color: $purple;
+                    font-size: 1.7rem;
+                    margin-bottom: 1em;
+    
+                    @media only screen and (min-width: 36em) {
+                        font-size: 1.5rem;
+                    }
+    
+                    @media only screen and (min-width: 62em) {
+                        font-size: 1.8rem;
+                    }
+    
+                    @media only screen and (min-width: 75em) {
+                        font-size: 2rem;
+                    }
                 }
-
-                &::-webkit-slider-thumb {
+    
+                input[type="range"]#uspora__input {
+                    width: 100%;
                     appearance: none;
-                    width: 1.5em;
-                    height: 1.5em;
-                    margin-top: -0.5em;
-                    background-color: $purple;
-                    border-radius: 1.5em;
-                }
-
-                &::-moz-range-thumb {
-                    border: none;
-                    border-radius: 1.5em;
-                    width: 1.5em;
-                    height: 1.5em;
-                    background-color: $purple;
-                }
-
-                &:focus {
-                    outline: none;
-
-                    &::-webkit-slider-thumb {
-                        background-color: #361fff;
+                    background: transparent;
+                    cursor: pointer;
+    
+                    &::-webkit-slider-runnable-track {
+                        height: 0.5em;
+                        background-color: #523ffc99;
+                        border-radius: 1em;
                     }
-
+    
+                    &::-moz-range-track {
+                        height: 0.5em;
+                        background-color: #523ffc99;
+                        border-radius: 1em;
+                    }
+    
+                    &::-webkit-slider-thumb {
+                        appearance: none;
+                        width: 1.5em;
+                        height: 1.5em;
+                        margin-top: -0.5em;
+                        background-color: $purple;
+                        border-radius: 1.5em;
+                    }
+    
                     &::-moz-range-thumb {
-                        background-color: #361fff;
+                        border: none;
+                        border-radius: 1.5em;
+                        width: 1.5em;
+                        height: 1.5em;
+                        background-color: $purple;
+                    }
+    
+                    &:focus {
+                        outline: none;
+    
+                        &::-webkit-slider-thumb {
+                            background-color: #361fff;
+                        }
+    
+                        &::-moz-range-thumb {
+                            background-color: #361fff;
+                        }
+                    }
+                }
+    
+                #uspora__value {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $purple;
+                    font-size: 1.5rem;
+    
+                    @media only screen and (min-width: 75em) {
+                        font-size: 2rem;
                     }
                 }
             }
-
-            #uspora__value {
-                width: 100%;
+    
+            .uspora__section-2 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: $purple;
-                font-size: 1.5rem;
-
-                @media only screen and (min-width: 75em) {
-                    font-size: 2rem;
-                }
-            }
-        }
-
-        .uspora__section-2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2em;
-            background-color: $purple;
-
-            p#uspora__estimate {
-                color: $turquoise;
-                font-size: 1.5rem;
-                line-height: 2;
-
-                br {
-                    display: none;
-
-                    @media only screen and (min-width: 62em) {
-                        display: inline;
+                padding: 2em;
+                background-color: $purple;
+    
+                p#uspora__estimate {
+                    color: $turquoise;
+                    font-size: 1.5rem;
+                    line-height: 2;
+    
+                    br {
+                        display: none;
+    
+                        @media only screen and (min-width: 62em) {
+                            display: inline;
+                        }
+                    }
+    
+                    mark {
+                        color: $purple;
+                        background-color: $turquoise;
+                        padding: 0.1em 0.2em;
+                        font-weight: bold;
+                        white-space: nowrap;
+                    }
+    
+                    @media only screen and (min-width: 36em) {
+                        font-size: 1.4rem;
+                    }
+    
+                    @media only screen and (min-width: 75em) {
+                        font-size: 1.7rem;
                     }
                 }
+            }
+    
+            @media only screen and (min-width: 36em) {
+                height: 20em;
+                grid-template-rows: auto;
+                grid-template-columns: 1fr 1fr;
+            }
+    
+            @media only screen and (min-width: 62em) {
+                height: 25em;
+            }
+        }
+        
+        @media only screen and (min-width: 36em) {
+            padding: 3em 0;
+        }
+    }
 
-                mark {
-                    color: $purple;
+    section#action {
+        padding: 2em 1em;
+
+        #action__buttons {
+            width: 100%;
+            row-gap: 1em;
+            column-gap: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a {
+                display: block;
+                padding: 0.5em 1em;
+                background-color: $purple;
+                color: $turquoise;
+                font-size: 1.1rem;
+                text-decoration: none;
+                transition: all 200ms ease-in-out;
+
+                &:hover,
+                &:focus {
                     background-color: $turquoise;
-                    padding: 0.1em 0.2em;
-                    font-weight: bold;
-                    white-space: nowrap;
+                    color: $purple;
                 }
 
                 @media only screen and (min-width: 36em) {
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
                 }
 
                 @media only screen and (min-width: 75em) {
-                    font-size: 1.7rem;
+                    font-size: 1.5rem;
+                }
+
+                @media only screen and (min-width: 100em) {
+                    font-size: 1.6rem;
                 }
             }
         }
 
         @media only screen and (min-width: 36em) {
-            height: 20em;
-            grid-template-rows: auto;
-            grid-template-columns: 1fr 1fr;
+            width: 90%;
+            margin: auto;
+            padding: 3em 0;
         }
-
-        @media only screen and (min-width: 62em) {
-            height: 25em;
-        }
-    }
-
-    @media only screen and (min-width: 62em) {
-        margin: 3em 0;
-    }
-
-    @media only screen and (min-width: 75em) {
-        margin: 4em 0;
     }
 }
 
