@@ -728,15 +728,20 @@ main.main-index {
 
             @media only screen and (min-width: 36em) {
                 grid-template-columns: repeat(4, 1fr);
+                margin-top: 3em;
             }
 
             @media only screen and (min-width: 62em) {
                 width: 90%;
-                margin: 2em auto 0 auto;
+                margin: 4em auto 0 auto;
             }
 
             @media only screen and (min-width: 75em) {
                 width: 80%;
+            }
+
+            @media only screen and (min-width: 100em) {
+                width: 70%;
             }
         }
 
