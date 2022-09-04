@@ -102,7 +102,7 @@
         </div>
         <main class="main-index">
             <section class="section-1">
-                <h2>děláme <span class="underline">stříkanou</span> izolaci</h2>
+                <h2>děláme stříkanou izolaci</h2>
                 <p class="selection">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis blanditiis
                     consequatur fugiat aperiam
                     id
@@ -183,7 +183,7 @@
                 </svg>
                 <div id="house__content">
                     <div>
-                        <h2>hodí se na <ins id="house__ins" class="underline">tato místa</ins></h2>
+                        <h2>hodí se na <span id="house__span">tato místa</span></h2>
                         <div id="house__description">
                             <p>Pro více informací klikněte na zvýrazněné části domu.</p>
                         </div>
@@ -200,7 +200,7 @@
                 </div>
                 <div id="vyhody__content-1">
                     <div>
-                        <h2><span class="underline">výhody</span> stříkané izolace</h2>
+                        <h2>výhody stříkané izolace</h2>
                         <ul>
                             <li>Beze spár a tepelných mostů</li>
                             <li>Výborné izolační vlastnosti (od 0,22 W/mK)</li>
@@ -223,13 +223,13 @@
                 </div>
                 <div id="vyhody__content-2">
                     <div>
-                        <h2>nechutná <span class="underline">kunám</span></h2>
+                        <h2>nechutná kunám</h2>
                         <p>S naší stříkanou izolací si můžete být jisti, že už vás kuny otravovat nebudou!</p>
                     </div>
                 </div>
             </section>
             <section id="uspory">
-                <h2>spočítejte si, <span class="underline">kolik</span> ušetříte</h2>
+                <h2>spočítejte si, kolik ušetříte</h2>
                 <div class="uspora">
                     <div class="uspora__section-1">
                         <div class="uspora__section-1__flex-container">
@@ -278,7 +278,7 @@
     </div>
     <script src="./script.js"></script>
     <script>
-        const hero = document.getElementById("hero"), headerHeight = document.querySelector(".header-index").clientHeight; let windowHeight = window.innerHeight; hero.style.height = 1.2 * windowHeight + "px", addEventListener("resize", function () { windowHeight = window.innerHeight, hero.style.height = windowHeight + headerHeight + "px" }); const house = document.getElementById("house__svg"); house.querySelectorAll(".house__part").forEach(e => { function n() { house.querySelectorAll(".house__part").forEach(e => { e.style.fill = "#543ffc" }) } e.onclick = function () { n(), house.querySelectorAll("[data-house='" + e.dataset.house + "']").forEach(e => { e.style.fill = "#98f9ff" }); const a = document.getElementById("house__ins"), t = document.getElementById("house__description"); switch (e.dataset.house) { case "strecha": a.innerHTML = "střechu", t.innerHTML = '\n                <p><a href="./peny/tvrda-stresni-pena.html" class="link">Tvrdá střešní pěna</a></p>\n                <p>Od 90 Kč/m<sup>2</sup> bez DPH</p>\n                <p>Je určená na exteriér střechy</p>\n            '; break; case "podkrovi": a.innerHTML = "podkroví", t.innerHTML = '\n                <p><a href="./peny/mekka-pena.html" class="link">Měkká pěna</a></p>\n                <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "strop": a.innerHTML = "strop", t.innerHTML = '\n                <p><a href="./peny/mekka-pena.html" class="link">Měkká pěna</a></p>\n                <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "vnejsi_steny": a.innerHTML = "vnější stěny", t.innerHTML = '\n                <p><a href="./peny/tvrda-pena.html" class="link">Tvrdá pěna</a></p>\n                <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "podlaha": a.innerHTML = "podlahu", t.innerHTML = '\n                <p><a href="./peny/mekka-pena.html" class="link">Měkká pěna</a></p>\n                <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "zaklady": a.innerHTML = "základy", t.innerHTML = '\n                <p><a href="./peny/tvrda-pena.html" class="link">Tvrdá pěna</a></p>\n                <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>\n            ' } } }); const input = document.getElementById("uspora__input"), value = document.getElementById("uspora__value"), estimate = document.getElementById("uspora__estimate"); switch (input.value) { case "1": value.innerHTML = "5000 Kč nebo méně", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2250 Kč</mark> měsíčně!"; break; case "2": value.innerHTML = "6000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2700 Kč</mark> měsíčně!"; break; case "3": value.innerHTML = "7000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3150 Kč</mark> měsíčně!"; break; case "4": value.innerHTML = "8000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3600 Kč</mark> měsíčně!"; break; case "5": value.innerHTML = "9000 Kč nebo více", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit i více než <mark>4050 Kč</mark>měsíčně!" }input.oninput = function () { switch (input.value) { case "1": value.innerHTML = "5000 Kč nebo méně", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2250 Kč</mark> měsíčně!"; break; case "2": value.innerHTML = "6000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2700 Kč</mark> měsíčně!"; break; case "3": value.innerHTML = "7000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3150 Kč</mark> měsíčně!"; break; case "4": value.innerHTML = "8000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3600 Kč</mark> měsíčně!"; break; case "5": value.innerHTML = "9000 Kč nebo více", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit i více než <mark>4050 Kč</mark>měsíčně!" } };
+        const hero = document.getElementById("hero"), headerHeight = document.querySelector(".header-index").clientHeight; let windowHeight = window.innerHeight; hero.style.height = 1.2 * windowHeight + "px", addEventListener("resize", function () { windowHeight = window.innerHeight, hero.style.height = windowHeight + headerHeight + "px" }); const house = document.getElementById("house__svg"); house.querySelectorAll(".house__part").forEach(e => { function n() { house.querySelectorAll(".house__part").forEach(e => { e.style.fill = "#543ffc" }) } e.onclick = function () { n(), house.querySelectorAll("[data-house='" + e.dataset.house + "']").forEach(e => { e.style.fill = "#98f9ff" }); const a = document.getElementById("house__span"), t = document.getElementById("house__description"); switch (e.dataset.house) { case "strecha": a.innerHTML = "střechu", t.innerHTML = '\n                <p><a href="./peny/tvrda-stresni-pena.html" class="link">Tvrdá střešní pěna</a></p>\n                <p>Od 90 Kč/m<sup>2</sup> bez DPH</p>\n                <p>Je určená na exteriér střechy</p>\n            '; break; case "podkrovi": a.innerHTML = "podkroví", t.innerHTML = '\n                <p><a href="./peny/mekka-pena.html" class="link">Měkká pěna</a></p>\n                <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "strop": a.innerHTML = "strop", t.innerHTML = '\n                <p><a href="./peny/mekka-pena.html" class="link">Měkká pěna</a></p>\n                <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "vnejsi_steny": a.innerHTML = "vnější stěny", t.innerHTML = '\n                <p><a href="./peny/tvrda-pena.html" class="link">Tvrdá pěna</a></p>\n                <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "podlaha": a.innerHTML = "podlahu", t.innerHTML = '\n                <p><a href="./peny/mekka-pena.html" class="link">Měkká pěna</a></p>\n                <p>Od 250 Kč/m<sup>2</sup> bez DPH</p>\n            '; break; case "zaklady": a.innerHTML = "základy", t.innerHTML = '\n                <p><a href="./peny/tvrda-pena.html" class="link">Tvrdá pěna</a></p>\n                <p>Od 72 Kč/m<sup>2</sup> bez DPH</p>\n            ' } } }); const input = document.getElementById("uspora__input"), value = document.getElementById("uspora__value"), estimate = document.getElementById("uspora__estimate"); switch (input.value) { case "1": value.innerHTML = "5000 Kč nebo méně", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2250 Kč</mark> měsíčně!"; break; case "2": value.innerHTML = "6000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2700 Kč</mark> měsíčně!"; break; case "3": value.innerHTML = "7000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3150 Kč</mark> měsíčně!"; break; case "4": value.innerHTML = "8000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3600 Kč</mark> měsíčně!"; break; case "5": value.innerHTML = "9000 Kč nebo více", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit i více než <mark>4050 Kč</mark>měsíčně!" }input.oninput = function () { switch (input.value) { case "1": value.innerHTML = "5000 Kč nebo méně", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2250 Kč</mark> měsíčně!"; break; case "2": value.innerHTML = "6000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>2700 Kč</mark> měsíčně!"; break; case "3": value.innerHTML = "7000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3150 Kč</mark> měsíčně!"; break; case "4": value.innerHTML = "8000 Kč", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit až <mark>3600 Kč</mark> měsíčně!"; break; case "5": value.innerHTML = "9000 Kč nebo více", estimate.innerHTML = "s naší stříkanou izolací můžete <br>ušetřit i více než <mark>4050 Kč</mark>měsíčně!" } };
     </script>
 </body>
 

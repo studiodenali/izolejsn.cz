@@ -27,7 +27,7 @@ house.querySelectorAll(".house__part").forEach((part) => {
             element.style.fill = "#98f9ff";
         });
 
-        const ins = document.getElementById("house__ins");
+        const span = document.getElementById("house__span");
         const description = document.getElementById("house__description");
 
         switch (part.dataset.house) {
