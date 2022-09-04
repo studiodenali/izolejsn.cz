@@ -712,20 +712,22 @@ main.main-index {
 
                 &::before {
                     display: block;
-                    //color: $purple;
                     font-size: 3.5rem;
                     text-align: center;
                 }
             }
 
             p {
-                //color: $purple;
                 font-family: $primary-font;
                 font-size: 1.2rem;
+
+                @media only screen and (min-width: 36em) and (max-width: 62em) {
+                    font-size: 1rem;
+                }
             }
 
             @media only screen and (min-width: 36em) {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
 
             @media only screen and (min-width: 62em) {
