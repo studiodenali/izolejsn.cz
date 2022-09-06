@@ -1162,6 +1162,14 @@ main.main-index {
     }
 }
 
+#disclaimer {
+    margin: 3em 1em 2em 1em;
+
+    p {
+        text-align: center;
+    }
+}
+
 // Page styles
 .container-page {
     min-height: calc(100vh - 9.75em);
