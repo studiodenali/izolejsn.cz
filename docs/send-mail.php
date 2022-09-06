@@ -1,6 +1,6 @@
 <?php
 
-$to = 'admin@studiodenali.cz';
+$to = 'strikame@izolejsn.cz';
 
 $from = $_POST['email'];
 $subject = $_POST['subject'];
