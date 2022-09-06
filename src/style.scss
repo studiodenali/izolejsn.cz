@@ -840,8 +840,9 @@ main.main-index {
     section#vyhody {
         row-gap: 2em;
         display: grid;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 15em auto;
         grid-template-columns: 1fr;
+        margin-bottom: 3em;
 
         #vyhody__image {
             width: 100%;
@@ -855,9 +856,9 @@ main.main-index {
 
         #vyhody__content {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            padding: 1em;
+            padding: 0 1em;
 
             ul {
                 padding-left: 1.5em;
@@ -874,7 +875,7 @@ main.main-index {
             }
 
             @media only screen and (min-width: 62em) {
-                padding: 2em;
+                padding: 3em 4em;
 
                 h2 {
                     text-align: left;
@@ -886,6 +887,7 @@ main.main-index {
             row-gap: 0;
             grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
         }
     }
 
@@ -894,7 +896,6 @@ main.main-index {
         height: 25em;
         position: relative;
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./images/kuna.jpg");
-        background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -917,6 +918,7 @@ main.main-index {
 
         @media only screen and (min-width: 62em) {
             height: 35em;
+            background-attachment: fixed;
         }
     }
 
