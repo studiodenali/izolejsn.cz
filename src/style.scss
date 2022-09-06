@@ -792,7 +792,7 @@ main.main-index {
         background-color: $purple;
 
         #icons__grid {
-            gap: 2em;
+            gap: 4em;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
 
@@ -821,6 +821,7 @@ main.main-index {
             @media only screen and (min-width: 36em) {
                 width: 90%;
                 margin: auto;
+                gap: 2em;
                 grid-template-columns: repeat(4, 1fr);
             }
     
@@ -920,7 +921,7 @@ main.main-index {
     }
 
     section#uspory {
-        padding-bottom: 2em;
+        margin-bottom: 2em;
 
         .uspora {
             display: grid;
@@ -1073,12 +1074,12 @@ main.main-index {
         }
 
         @media only screen and (min-width: 36em) {
-            padding-bottom: 3em;
+            margin-bottom: 3em;
         }
     }
 
     section#action {
-        padding: 2em 1em;
+        margin: 2em 1em;
 
         #action__buttons {
             width: 100%;
@@ -1119,8 +1120,11 @@ main.main-index {
 
         @media only screen and (min-width: 36em) {
             width: 90%;
-            margin: auto;
-            padding: 3em 0;
+            margin: 3em auto;
+        }
+
+        @media only screen and (min-width: 62em) {
+            margin: 3em auto 4em auto;
         }
     }
 }
@@ -1398,7 +1402,7 @@ main.kontakt {
 
 // Footer
 footer {
-    margin: 2em 1em;
+    margin: 3em 1em;
 
     p {
         text-align: center;
@@ -1442,5 +1446,9 @@ footer {
 
     .copyright:hover {
         color: $purple;
+    }
+
+    @media only screen and (min-width: 62em) {
+        margin: 4em auto 3em auto;
     }
 }
