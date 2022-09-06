@@ -622,14 +622,30 @@ header.header-page {
 }
 
 #hero {
+    position: relative;
     padding-right: calc(-1 * (100vw - 100%));
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 
-    @media only screen and (max-width: 62em) {
-        height: 30em !important;
+    #hero__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        background-color: #00000033;
+
+        h1 {
+            color: $white;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
+
+    @media (pointer: coarse) {
         background-attachment: scroll;
-        background-size: cover;
 
         #hero__content {
             width: 100%;
@@ -648,23 +664,25 @@ header.header-page {
         }
     }
 
-    @media only screen and (min-width: 62em) {
-        position: relative;
+    @media (pointer: fine) {
         background-attachment: fixed;
-        background-size: cover;
 
         #hero__content {
             width: 100%;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-
+    
             h1 {
                 color: $white;
                 font-size: 3rem;
                 text-align: center;
             }
         }
+    }
+
+    @media only screen and (max-width: 62em) {
+        height: 30em !important;
     }
 }
 
@@ -824,11 +842,11 @@ main.main-index {
                 gap: 2em;
                 grid-template-columns: repeat(4, 1fr);
             }
-    
+
             @media only screen and (min-width: 75em) {
                 width: 70%;
             }
-    
+
             @media only screen and (min-width: 100em) {
                 width: 60%;
             }
@@ -1134,7 +1152,6 @@ main.main-index {
 // Page styles
 .container-page {
     min-height: calc(100vh - 9.75em);
-    gap: 4em;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
@@ -1165,23 +1182,29 @@ main.main-index {
     }
 
     main {
-        padding: 0 1em 4em 1em;
+        margin: 2em 1em 2em 1em;
         grid-area: page__main;
 
         @media only screen and (min-width: 36em) {
-            padding: 0 2em 4em 2em;
+            margin: 3em 2em;
         }
 
         @media only screen and (min-width: 62em) {
-            padding: 4em 4em 4em 0;
+            margin: 3em 3em 0 0;
         }
     }
 
     footer {
         grid-area: page__footer;
+        margin: 2em 1em;
+
+        @media only screen and (min-width: 62em) {
+            margin-top: 0;
+        }
     }
 
     @media only screen and (min-width: 62em) {
+        gap: 3em;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "page__heading page__main""page__heading page__footer";
@@ -1228,7 +1251,7 @@ main.pena {
     table {
         width: 100%;
         border-collapse: collapse;
-        
+
         tr td {
             width: 50%;
             padding-top: 0.5em;
@@ -1263,6 +1286,7 @@ main.pena {
 main.o-nas {
     img {
         width: 100%;
+        margin-top: 2em;
     }
 }
 
@@ -1356,6 +1380,8 @@ main.kontakt {
             }
 
             textarea#message {
+                min-height: 10em;
+                resize: vertical;
                 border-width: 1px;
                 border-style: solid;
                 grid-area: message;
