@@ -912,7 +912,6 @@ main.main-index {
     section#kuna {
         width: 100%;
         height: 25em;
-        position: relative;
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./images/kuna.jpg");
         background-repeat: no-repeat;
         background-position: center;
@@ -920,13 +919,28 @@ main.main-index {
 
         #kuna__content {
             width: 100%;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
 
             h2,
             p {
                 color: $white;
+            }
+        }
+
+        @media (pointer: coarse) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-attachment: scroll;            
+        }
+
+        @media (pointer: fine) {
+            position: relative;
+            background-attachment: fixed;
+
+            #kuna__content {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
             }
         }
 
@@ -936,7 +950,6 @@ main.main-index {
 
         @media only screen and (min-width: 62em) {
             height: 35em;
-            background-attachment: fixed;
         }
     }
 
