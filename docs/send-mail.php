@@ -9,7 +9,7 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['message'])
     $message = $_POST['message'];
 
     // Recipient
-    $to = 'admin@studiodenali.cz';
+    $to = 'brzy@studiodenali.cz';
     
     // Additional headers
     $headers = [
