@@ -714,39 +714,6 @@ main.main-index {
     section#intro {
         margin: 2em 1em;
 
-        #intro__grid {
-            gap: 2em;
-            display: grid;
-            margin-top: 2em;
-            grid-template-columns: repeat(1, 1fr);
-
-            i {
-                display: block;
-                margin-bottom: 1em;
-
-                &::before {
-                    display: block;
-                    font-size: 3.5rem;
-                    text-align: center;
-                }
-            }
-
-            p {
-                font-family: $primary-font;
-                font-size: 1.2rem;
-
-                @media only screen and (min-width: 36em) and (max-width: 62em) {
-                    font-size: 1rem;
-                }
-            }
-
-            @media only screen and (min-width: 36em) {
-                grid-template-columns: repeat(4, 1fr);
-                margin-top: 3em;
-            }
-
-        }
-
         @media only screen and (min-width: 36em) {
             width: 90%;
             margin: 3em auto 4em auto;
@@ -817,6 +784,16 @@ main.main-index {
             gap: 4em;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
+
+            svg {
+                height: 3.5em;
+                display: block;
+                margin: 0 auto 1em auto;
+
+                path {
+                    fill: $white;
+                }
+            }
 
             i {
                 display: block;
