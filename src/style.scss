@@ -9,11 +9,8 @@
     font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap');
-
 // Variables
-$primary-font: "Michroma", sans-serif;
-$secondary-font: "Saira Semi Condensed", sans-serif;
+$font: "Michroma", sans-serif;
 
 $black: #000;
 $white: #fff;
@@ -42,7 +39,7 @@ html {
 
 body {
     height: 100%;
-    font-family: $primary-font;
+    font-family: $font;
 }
 
 a {
@@ -809,7 +806,7 @@ main.main-index {
 
             p {
                 color: $white;
-                font-family: $primary-font;
+                font-family: $font;
                 font-size: 1.2rem;
 
                 @media only screen and (min-width: 36em) and (max-width: 62em) {
